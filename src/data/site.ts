@@ -18,6 +18,7 @@ export const siteConfig = {
     medium: "",
     googleScholar: "",
     orcid: "",
+    eporfolio: "https://www.mygreatlearning.com/eportfolio/priyanka-ankam3",
   },
 
   navigation: [
