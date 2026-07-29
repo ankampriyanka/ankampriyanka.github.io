@@ -1,3 +1,4 @@
+import Button from "@/components/ui/Button";
 import { siteConfig } from "@/data/site";
 
 export default function Hero() {
@@ -19,16 +20,7 @@ export default function Hero() {
           {siteConfig.description}
         </p>
 
-        {/* Buttons */}
-        <div className="mt-10 flex flex-wrap gap-4">
-          <button className="rounded-xl bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800">
-            View Projects
-          </button>
 
-          <button className="rounded-xl border border-gray-300 px-6 py-3 font-medium transition hover:bg-gray-100">
-            Download Resume
-          </button>
-        </div>
       </div>
     </section>
   );
