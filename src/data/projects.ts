@@ -4,8 +4,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Responsible AI Platform",
-    description:
-      "An end-to-end governance platform for Responsible AI in automotive, integrating AI lifecycle management, compliance, and risk assessment.",
+    description: "An end-to-end governance platform for Responsible AI in automotive, integrating AI lifecycle management, compliance, and risk assessment.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -14,7 +13,9 @@ export const projects: Project[] = [
     ],
     github: "#",
     featured: true,
-  },
+    status: "Completed",
+    category: "Responsible AI",
+    },
   {
     id: 2,
     title: "VibeCodeScanner",
@@ -27,6 +28,8 @@ export const projects: Project[] = [
     ],
     github: "#",
     featured: true,
+    status: "Completed",
+    category: "AI Safety"
   },
   {
     id: 3,
@@ -40,6 +43,8 @@ export const projects: Project[] = [
     ],
     github: "#",
     featured: true,
+    status: "Completed",
+    category: "Research"
   },
    {
     id: 4,
@@ -53,5 +58,7 @@ export const projects: Project[] = [
     ],
     github: "#",
     featured: true,
+    status: "Completed",
+    category: "Research"
   },
 ];

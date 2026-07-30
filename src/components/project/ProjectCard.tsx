@@ -1,40 +1,48 @@
-import Link from "next/link";
 import Card from "@/components/ui/Card";
 import { Project } from "@/types/project";
 
-type ProjectCardProps = {
+type Props = {
   project: Project;
 };
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project }: Props) {
   return (
     <Card>
-      <div className="flex h-full flex-col">
-        <h3 className="text-xl font-semibold text-gray-900">
+      <div className="space-y-4">
+
+        <div className="flex items-center justify-between">
+
+          <span className="rounded-full bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-700">
+            {project.category}
+          </span>
+
+          <span className="text-sm text-gray-500">
+            {project.status}
+          </span>
+
+        </div>
+
+        <h3 className="text-2xl font-semibold">
           {project.title}
         </h3>
 
-        <p className="mt-3 flex-grow text-gray-600">
+        <p className="text-gray-600">
           {project.description}
         </p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2">
+
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full bg-cyan-50 px-3 py-1 text-sm text-cyan-700"
+              className="rounded bg-gray-100 px-2 py-1 text-xs"
             >
               {tech}
             </span>
           ))}
+
         </div>
 
-        <Link
-          href={project.github}
-          className="mt-6 font-medium text-cyan-600 hover:underline"
-        >
-          View Project →
-        </Link>
       </div>
     </Card>
   );
