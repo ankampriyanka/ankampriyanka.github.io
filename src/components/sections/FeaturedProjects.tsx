@@ -2,9 +2,10 @@ import { projects } from "@/data/projects";
 import Container from "@/components/layout/Container";
 import ProjectCard from "@/components/project/ProjectCard";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { getFeaturedProjects } from "@/lib/helpers";
 
 export default function FeaturedProjects() {
-  const featuredProjects = projects.filter((project) => project.featured);
+  const featuredProjects = getFeaturedProjects();
 
   return (
     <section id="projects" className="py-24">

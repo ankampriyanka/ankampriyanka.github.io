@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/data/site";
+import { ROUTES } from "@/constants/routes";
 
 export default function Hero() {
   return (
@@ -28,11 +29,11 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="mt-10 flex flex-wrap gap-4">
-          <Button href="/projects">
+          <Button href={ROUTES.PROJECTS}>
             View Projects
           </Button>
 
-          <Button href="/resume" variant="secondary">
+          <Button href={ROUTES.RESUME} variant="secondary">
             View Resume
           </Button>
         </div>

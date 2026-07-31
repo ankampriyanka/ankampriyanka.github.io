@@ -2,9 +2,10 @@ import Container from "@/components/layout/Container";
 import ResearchCard from "@/components/research/ResearchCard";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { research } from "@/data/research";
+import { getFeaturedResearch } from "@/lib/helpers";
 
 export default function ResearchHighlights() {
-  const featuredResearch = research.filter((item) => item.featured);
+  const featuredResearch = getFeaturedResearch();
 
   return (
     <section

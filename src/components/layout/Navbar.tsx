@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
+import { navigation } from "@/data/navigation";
+import { ROUTES } from "@/constants/routes";
 
 export default function Navbar() {
   return (
@@ -12,7 +14,7 @@ export default function Navbar() {
 
         {/* Navigation */}
         <nav className="hidden gap-8 md:flex">
-          {siteConfig.navigation.map((item) => (
+          {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}

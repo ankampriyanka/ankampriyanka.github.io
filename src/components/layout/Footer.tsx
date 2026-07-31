@@ -1,83 +1,122 @@
 import Link from "next/link";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
+import { social } from "@/data/social";
 import { siteConfig } from "@/data/site";
+import Container from "./Container";
+import { ROUTES } from "@/constants/routes";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="mt-24 border-t border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 md:flex-row md:items-center md:justify-between">
-        {/* Left Section */}
-        <div>
-          <h3 className="text-xl font-bold">{siteConfig.name}</h3>
+    <footer className="border-t bg-white">
+      <Container>
+        <div className="grid gap-12 py-16 md:grid-cols-3">
 
-          <p className="mt-2 max-w-md text-sm text-gray-600">
-            {siteConfig.title}
-          </p>
+          {/* Left */}
 
-          <p className="mt-4 text-sm text-gray-500">
-            © {currentYear} {siteConfig.name}. All rights reserved.
-          </p>
-        </div>
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900">
+              {siteConfig.name}
+            </h3>
 
-        {/* Navigation */}
-        <div>
-          <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-800">
-            Navigation
-          </h4>
+            <p className="mt-4 text-slate-600">
+              {siteConfig.title}
+            </p>
 
-          <ul className="space-y-2">
-            {siteConfig.navigation.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-gray-600 transition-colors hover:text-cyan-600"
-                >
-                  {item.name}
+            <p className="mt-6 text-sm text-slate-500">
+              {siteConfig.copyright}
+            </p>
+          </div>
+
+          {/* Quick Links */}
+
+          <div>
+            <h4 className="mb-4 font-semibold uppercase">
+              Navigation
+            </h4>
+
+            <ul className="space-y-3">
+
+              <li>
+                <Link href="/">
+                  Home
                 </Link>
               </li>
-            ))}
-          </ul>
-        </div>
 
-        {/* Connect */}
-        <div>
-          <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-800">
-            Connect
-          </h4>
+              <li>
+                <Link href={ROUTES.PROJECTS}>
+                  Projects
+                </Link>
+              </li>
 
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href={siteConfig.social.linkedin}
-                target="_blank"
-                className="text-sm text-gray-600 transition-colors hover:text-cyan-600"
-              >
-                LinkedIn
-              </Link>
-            </li>
+              <li>
+                <Link href={ROUTES.RESEARCH}>
+                  Research
+                </Link>
+              </li>
 
-            <li>
-              <Link
-                href={siteConfig.social.github}
-                target="_blank"
-                className="text-sm text-gray-600 transition-colors hover:text-cyan-600"
-              >
-                GitHub
-              </Link>
-            </li>
+              <li>
+                <Link href={ROUTES.RESUME}>
+                  Resume
+                </Link>
+              </li>
 
-            <li>
+              <li>
+                <Link href={ROUTES.CONTACT}>
+                  Contact
+                </Link>
+              </li>
+
+            </ul>
+          </div>
+
+          {/* Social */}
+
+          <div>
+
+            <h4 className="mb-4 font-semibold uppercase">
+              Connect
+            </h4>
+
+            <div className="space-y-4">
+
               <a
-                href={`mailto:${siteConfig.email}`}
-                className="text-sm text-gray-600 transition-colors hover:text-cyan-600"
+                href={social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-cyan-600"
               >
+                <FaLinkedin />
+                LinkedIn
+              </a>
+
+              <a
+                href={social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-cyan-600"
+              >
+                <FaGithub />
+                GitHub
+              </a>
+
+              <a
+                href={`mailto:${social.email}`}
+                className="flex items-center gap-3 hover:text-cyan-600"
+              >
+                <FaEnvelope />
                 Email
               </a>
-            </li>
-          </ul>
+
+            </div>
+
+          </div>
+
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
