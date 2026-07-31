@@ -7,7 +7,7 @@ export default function FeaturedProjects() {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <section className="py-24">
+    <section id="projects" className="py-24">
       <Container>
         <SectionHeading
           title="Featured Projects"

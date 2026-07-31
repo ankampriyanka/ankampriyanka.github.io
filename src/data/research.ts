@@ -1,4 +1,6 @@
-export const research = [
+import { Research } from "@/types/research";
+
+export const research: Research[] = [
   {
     id: 1,
     title: "AI Trust Score for Driver Monitoring Systems",

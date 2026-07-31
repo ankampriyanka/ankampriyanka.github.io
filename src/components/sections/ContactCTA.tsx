@@ -3,17 +3,20 @@ import Button from "@/components/ui/Button";
 
 export default function ContactCTA() {
   return (
-    <section className="bg-slate-900 py-24 text-white">
+    <section
+      id="contact"
+      className="bg-slate-900 py-24 text-white"
+    >
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-bold">
-            Let's Build Responsible AI Together
+            Let's Connect
           </h2>
 
-          <p className="mt-6 text-lg text-slate-300">
-            I'm passionate about Program Management, Responsible AI,
-            AI Safety, Product Operations, and building trustworthy AI
-            systems for enterprise and automotive domains.
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            I'm always interested in collaborating on Responsible AI,
+            AI Safety, Technical Program Management, Automotive AI,
+            Governance and Enterprise Transformation initiatives.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -25,7 +28,7 @@ export default function ContactCTA() {
               href="https://github.com/ankampriyanka"
               variant="secondary"
             >
-              View GitHub
+              GitHub
             </Button>
           </div>
         </div>

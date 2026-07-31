@@ -5,7 +5,9 @@ import { experiences } from "@/data/experienceTimeline";
 
 export default function ExperienceTimeline() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section
+    id="experience"
+    className="py-24 bg-slate-50">
       <Container>
         <SectionHeading
           title="Professional Journey"

@@ -3,6 +3,6 @@ export interface Research {
   title: string;
   summary: string;
   area: string;
-  status: "Published" | "In Progress" | "Research";
+  status: "Research" | "In Progress" | "Published";
   featured: boolean;
 }

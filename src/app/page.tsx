@@ -10,21 +10,23 @@ import ContactCTA from "@/components/sections/ContactCTA";
 export default function Home() {
   return (
     <>
-      <Navbar />
+    <Navbar />
 
-      <main>
-        <Hero />
+    <main>
 
-        <FeaturedProjects />
+      <Hero />
 
-        <ResearchHighlights />
+      <FeaturedProjects />
 
-        <ExperienceTimeline />
+      <ExperienceTimeline />
 
-        <ContactCTA />
-      </main>
+      <ResearchHighlights />
 
-      <Footer />
+      <ContactCTA />
+
+    </main>
+
+    <Footer />
     </>
   );
 }
