@@ -17,10 +17,10 @@ export default function Button({
 
 const variants = {
   primary:
-    "bg-slate-900 text-white hover:bg-slate-800 shadow-sm",
+    "bg-slate-900 text-white hover:bg-slate-700 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200",
 
   secondary:
-    "border border-slate-300 bg-white text-slate-900 hover:bg-slate-100",
+    "border border-slate-300 bg-white text-slate-900 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800",
 };
 
   const className = `${baseClasses} ${variants[variant]}`;

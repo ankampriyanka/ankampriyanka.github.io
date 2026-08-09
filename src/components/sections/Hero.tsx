@@ -1,72 +1,85 @@
-import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/data/site";
 import { ROUTES } from "@/constants/routes";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-      <div className="max-w-4xl">
-        {/* Title */}
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600">
-          {siteConfig.title}
-        </p>
+    <section className="bg-white dark:bg-slate-950">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="pt-6 pb-0 md:pt-8">
 
-        {/* Name */}
-        <h1 className="text-5xl font-bold leading-tight text-slate-900 md:text-7xl">
-          {siteConfig.name}
-        </h1>
+          {/* Title */}
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-400">
+            {siteConfig.title}
+          </p>
 
-        {/* Tagline */}
-        <h2 className="mt-4 text-2xl font-semibold text-slate-700">
-          Program Management • Responsible AI • AI Safety
-        </h2>
+          {/* Name */}
+          <h1 className="text-5xl font-bold leading-tight text-slate-900 dark:text-white md:text-7xl">
+            {siteConfig.name}
+          </h1>
 
-        {/* Description */}
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-          {siteConfig.description}
-        </p>
+          {/* Tagline */}
+          <h2 className="mt-3 text-2xl font-semibold text-slate-700 dark:text-slate-200">
+            Program Management • Responsible AI • AI Safety
+          </h2>
 
-        {/* CTA Buttons */}
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Button href={ROUTES.PROJECTS}>
-            View Projects
-          </Button>
+          {/* Description */}
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            {siteConfig.description}
+          </p>
 
-          <Button href={ROUTES.RESUME} variant="secondary">
-            View Resume
-          </Button>
-        </div>
+          {/* CTA Buttons */}
+          <div className="mt-7 flex flex-wrap gap-4">
+            <Button href={ROUTES.PROJECTS}>
+              View Projects
+            </Button>
 
-        {/* Highlights */}
-        <div className="mt-16 grid grid-cols-2 gap-8 border-t border-slate-200 pt-10 md:grid-cols-4">
-          <div>
-            <p className="text-3xl font-bold text-cyan-600">14+</p>
-            <p className="mt-2 text-sm text-slate-600">
-              Years Experience
-            </p>
+            <Button href={ROUTES.RESUME} variant="secondary">
+              View Resume
+            </Button>
           </div>
 
-          <div>
-            <p className="text-3xl font-bold text-cyan-600">25+</p>
-            <p className="mt-2 text-sm text-slate-600">
-              Enterprise Programs
-            </p>
+          {/* Highlights */}
+          <div className="mt-8 grid grid-cols-2 gap-8 border-t border-slate-200 pt-6 dark:border-slate-800 md:grid-cols-4">
+
+            <div>
+              <p className="text-3xl font-bold text-cyan-600 dark:text-cyan-400">
+                14+
+              </p>
+              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                Years Experience
+              </p>
+            </div>
+
+            <div>
+              <p className="text-3xl font-bold text-cyan-600 dark:text-cyan-400">
+                25+
+              </p>
+              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                Enterprise Programs
+              </p>
+            </div>
+
+            <div>
+              <p className="text-3xl font-bold text-cyan-600 dark:text-cyan-400">
+                5+
+              </p>
+              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                AI & Research Projects
+              </p>
+            </div>
+
+            <div>
+              <p className="text-3xl font-bold text-cyan-600 dark:text-cyan-400">
+                DBA
+              </p>
+              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                AI & Machine Learning
+              </p>
+            </div>
+
           </div>
 
-          <div>
-            <p className="text-3xl font-bold text-cyan-600">5+</p>
-            <p className="mt-2 text-sm text-slate-600">
-              AI & Research Projects
-            </p>
-          </div>
-
-          <div>
-            <p className="text-3xl font-bold text-cyan-600">DBA</p>
-            <p className="mt-2 text-sm text-slate-600">
-              AI & Machine Learning
-            </p>
-          </div>
         </div>
       </div>
     </section>

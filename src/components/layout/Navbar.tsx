@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/data/site";
 import { navigation } from "@/data/navigation";
 import { ROUTES } from "@/constants/routes";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -24,6 +25,8 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
+        
+        <ThemeToggle />
       </div>
     </header>
   );

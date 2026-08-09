@@ -1,32 +1,29 @@
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
 import Hero from "@/components/sections/Hero";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
-import ResearchHighlights from "@/components/sections/ResearchHighlights";
 import ExperienceTimeline from "@/components/sections/ExperienceTimelines";
+import ResearchHighlights from "@/components/sections/ResearchHighlights";
 import ContactCTA from "@/components/sections/ContactCTA";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <>
-    <Navbar />
+      <Navbar />
 
-    <main>
+      <main>
+        <Hero />
 
-      <Hero />
+        <FeaturedProjects />
 
-      <FeaturedProjects />
+        <ExperienceTimeline />
 
-      <ExperienceTimeline />
+        <ResearchHighlights />
 
-      <ResearchHighlights />
+        <ContactCTA />
+      </main>
 
-      <ContactCTA />
-
-    </main>
-
-    <Footer />
+      <Footer />
     </>
   );
 }
