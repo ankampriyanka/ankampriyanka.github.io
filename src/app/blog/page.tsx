@@ -19,6 +19,14 @@ const articles = [
     href: "/blog/ai-governance-debt-measuring",
     date: "September 2026",
   },
+  {
+    title: "AI Governance Debt vs Technical Debt vs Security Debt",
+    description:
+      "Why AI Governance Debt deserves a distinct lens alongside technical and security debt — and why the three should not be treated as interchangeable.",
+    category: "AI Governance · Part 3",
+    href: "/blog/ai-governance-debt-vs-technical-security",
+    date: "September 2026",
+  },
 ];
 
 export default function BlogPage() {
