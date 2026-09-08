@@ -4,85 +4,68 @@ export const experiences: Experience[] = [
   {
     id: 1,
     company: "Mercedes-Benz Research & Development India",
-    role: "Senior Engineer – Program Management & Product Operations",
+    role: "AI Governance Lead and Product Management",
     duration: "Feb 2022 – Present",
     location: "Bengaluru, India",
-
     description:
-      "Driving enterprise program management, product operations, Responsible AI governance, Agile transformation, and AI safety initiatives across global engineering organizations. My role combines strategic planning, delivery governance, stakeholder management, AI transformation, and operational excellence to enable scalable engineering execution.",
-
+      "Spearheading Responsible AI and AI Governance initiatives focused on establishing practical governance mechanisms for trustworthy enterprise AI adoption across the AI lifecycle.",
     achievements: [
-      "Led enterprise-wide process optimization initiatives for engineering infrastructure, contributing to storage optimization of more than 2.5 PB.",
-      "Designed governance dashboards and operational reporting frameworks resulting in cost optimizations exceeding €200K.",
-      "Facilitated Agile ceremonies including Sprint Planning, Reviews, Retrospectives, Scrum of Scrums, and PI Planning across distributed engineering teams.",
-      "Coached Agile teams through SAFe practices, delivery planning, sprint execution, and continuous improvement initiatives.",
-      "Successfully onboarded more than 120 engineers onto enterprise engineering platforms through structured operational readiness programs and training.",
-      "Presented executive delivery reviews covering program health, risks, mitigation plans, and delivery forecasts to senior leadership.",
-      "Collaborated with engineering, procurement, finance, and infrastructure teams to enable strategic procurement of software, hardware, cloud resources, and lab equipment.",
-      "Managed operational budgeting, forecasting, quarterly planning, and executive dashboards.",
-      "Actively contributed to women empowerment initiatives, mentoring programs, employee engagement, and diversity activities.",
-
-      "Designed Responsible AI governance frameworks supporting enterprise AI adoption.",
-      "Developed AI Trust Score methodologies integrating Safety, Fairness, Explainability, Privacy, Robustness, and Governance metrics.",
-      "Built reusable AI governance components supporting model validation, compliance assessment, and AI risk management.",
-      "Developed LLM-powered solutions using Retrieval Augmented Generation (RAG), semantic search, vector databases, and workflow automation.",
-      "Currently pursuing doctoral research focused on trustworthy AI evaluation methodologies for Driver Monitoring Systems (DMS).",
-
-      "Executive Assistant to Vice President (Feb 2022 – Jan 2024), supporting strategic planning, executive governance, and enterprise transformation initiatives."
+      "Developing an AI Governance framework covering AI risk classification, safety, fairness, robustness, explainability, transparency, privacy, accountability and governance controls.",
+      "Conceptualized an AI Trust Score / AI Trust Scorecard to provide a structured, measurable assessment of AI-system trustworthiness across multiple Responsible AI dimensions.",
+      "Designed reusable AI governance and assurance components for model evaluation, risk assessment, compliance evidence, lifecycle governance and decision-making.",
+      "Translating emerging AI governance requirements and Responsible AI principles into actionable controls, evaluation criteria and lifecycle checkpoints.",
+      "Working across AI safety, security, privacy, fairness, robustness and explainability to establish a structured AI risk and trust taxonomy for enterprise AI systems.",
+      "Developing AI evaluation approaches for LLM and Retrieval-Augmented Generation (RAG) systems, including assessment of response quality, faithfulness, relevance and hallucination risk.",
+      "Developing concepts for shift-left AI assurance, incorporating data quality, model validation, evaluation gates and governance checks earlier in the AI development lifecycle.",
+      "Building LLM-powered solutions using RAG, semantic search and workflow automation to improve engineering productivity and knowledge access.",
+      "Conducting doctoral research into trustworthy AI evaluation methodologies for Driver Monitoring Systems (DMS), with particular focus on AI safety and measurable trustworthiness.",
+      "Researching AI safety mechanisms, guardrails and evaluation complexity to understand their impact on AI scalability, effectiveness, latency and operational cost.",
+      "Executive Assistant to VP at MBRDI on TPP from Feb 2022 to Jan 2024, supporting executive governance and strategic initiatives."
     ]
   },
-
   {
     id: 2,
     company: "Collins Aerospace",
     role: "Program Management – Managing Director's Office",
     duration: "Nov 2019 – Jan 2022",
     location: "Bengaluru, India",
-
     description:
-      "Partnered directly with executive leadership to drive enterprise operations, strategic planning, governance, business transformation, executive reporting, and operational excellence across multiple business functions.",
-
+      "Partnered with senior leadership, business heads and cross-functional stakeholders to govern high-visibility operations, transformation and strategic programs.",
     achievements: [
-      "Partnered with Managing Director and senior executives to deliver high-visibility strategic initiatives.",
-      "Designed executive dashboards consolidating KPIs, delivery metrics, financial indicators, and operational performance.",
-      "Led governance reviews supporting operational excellence, business continuity, and organizational transformation during COVID-19.",
-      "Performed SIPOC analysis, Continuous Improvement initiatives, quality assessments, and operational analytics.",
-      "Standardized reporting templates and governance mechanisms improving operational visibility across multiple departments."
+      "Established executive reporting mechanisms consolidating organizational KPIs, performance indicators, risks and operational insights for senior leadership decision-making.",
+      "Led program operations governance, facilitating management reviews, quality discussions, issue resolution and business continuity mechanisms.",
+      "Analyzed SIPOC, continuous-improvement, quality and operational datasets to identify process gaps, risks and improvement opportunities.",
+      "Standardized reporting workflows, governance templates and performance tracking mechanisms, improving management visibility and reporting consistency.",
+      "Coordinated cross-functional stakeholders to drive timely resolution of operational blockers and maintain execution against strategic priorities."
     ]
   },
-
   {
     id: 3,
     company: "PeopleStrong & Chetak Enterprises",
     role: "Founder's Office",
     duration: "Mar 2017 – Oct 2019",
     location: "Mumbai, India",
-
     description:
-      "Worked closely with founders supporting business operations, HR initiatives, sales enablement, executive strategy, and digital transformation programs.",
-
+      "Partnered with HR, Sales and Product leadership on strategic initiatives, operational improvement and business transformation.",
     achievements: [
-      "Partnered with HR, Sales, and Product teams to improve operational efficiency.",
-      "Supported executive research, contract preparation, and strategic planning initiatives.",
-      "Led complete redesign of corporate website improving recruitment visibility and organizational branding."
+      "Conducted business research, operational analysis and process reviews to support executive-level decision-making.",
+      "Supported contract preparation, stakeholder coordination and execution of strategic initiatives.",
+      "Led complete website transformation, improving organizational visibility, recruitment transparency and presentation of products and capabilities."
     ]
   },
-
   {
     id: 4,
     company: "Larsen & Toubro",
-    role: "Assistant Manager / Senior Planning Engineer",
+    role: "Assistant Manager / Senior Planning Engineer – Engineering Programs - Head Office, UAE",
     duration: "Jul 2012 – Dec 2016",
-    location: "Sharjah, UAE",
-
+    location: "Sharjah, United Arab Emirates",
     description:
-      "Managed planning, scheduling, cost control, execution monitoring, and governance for large-scale engineering and infrastructure programs across multiple regions.",
-
+      "Managed planning, resource allocation, cost control, risk management and execution governance for large-scale engineering and infrastructure programs.",
     achievements: [
-      "Led planning and resource optimization for large engineering programs.",
-      "Improved project margins through optimized scheduling and proactive risk management.",
-      "Successfully completed financial closure of more than 60 engineering projects.",
-      "Designed and launched an enterprise e-Library system improving knowledge management and documentation accessibility."
+      "Improved project margins by approximately 2% through optimized resource planning, forecasting and proactive risk mitigation.",
+      "Successfully coordinated and financially closed 60+ projects across India, working with multi-site engineering and business teams.",
+      "Developed project governance mechanisms covering planning, progress monitoring, cost, risks, dependencies and execution performance.",
+      "Designed and launched an internal e-Library/document management system, centralizing engineering knowledge and improving organizational access to project documentation."
     ]
   }
 ];
