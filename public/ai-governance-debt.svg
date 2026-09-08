@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">AI Governance Debt compounds over time</title>
+  <desc id="desc">A conceptual chart showing governance requirement rising faster than governance capability, creating a widening governance debt gap over time.</desc>
+  <rect width="900" height="520" fill="#ffffff"/>
+  <line x1="100" y1="420" x2="820" y2="420" stroke="#64748b" stroke-width="3"/>
+  <line x1="100" y1="420" x2="100" y2="80" stroke="#64748b" stroke-width="3"/>
+  <path d="M100 420 C260 410 400 350 520 250 C650 145 735 105 820 75 L820 350 C700 365 600 380 480 395 C330 410 210 418 100 420 Z" fill="#d16b67" opacity="0.88"/>
+  <path d="M100 420 C300 410 500 390 820 350" fill="none" stroke="#1f6f63" stroke-width="5"/>
+  <path d="M100 420 C260 410 400 350 520 250 C650 145 735 105 820 75" fill="none" stroke="#334155" stroke-width="4" stroke-dasharray="8 7"/>
+  <text x="575" y="135" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#334155">AI capability</text>
+  <text x="560" y="205" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#7f1d1d">Governance debt</text>
+  <text x="555" y="232" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7f1d1d">compounds over time</text>
+  <text x="565" y="390" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#14532d">Governance capacity</text>
+  <text x="770" y="455" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#334155">Time</text>
+  <circle cx="360" cy="360" r="6" fill="#7f1d1d"/>
+  <circle cx="500" cy="275" r="6" fill="#7f1d1d"/>
+  <circle cx="675" cy="165" r="6" fill="#7f1d1d"/>
+</svg>
