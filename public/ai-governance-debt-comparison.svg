@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI Governance Debt compared with Technical Debt and Security Debt</title>
+  <desc id="desc">Three connected lenses: technical debt concerns engineering sustainability, security debt concerns security resilience, and AI Governance Debt concerns governance capability.</desc>
+  <rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+  <text x="600" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">Three debts. Three management questions.</text>
+  <text x="600" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#64748b">Related risks can overlap — but the management concern remains distinct.</text>
+
+  <rect x="90" y="165" width="300" height="300" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="145" cy="220" r="24" fill="#e2e8f0"/>
+  <text x="145" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#334155">1</text>
+  <text x="180" y="228" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#0f172a">Technical Debt</text>
+  <text x="120" y="285" font-family="Arial, sans-serif" font-size="17" fill="#475569">Deferred engineering decisions</text>
+  <text x="120" y="312" font-family="Arial, sans-serif" font-size="17" fill="#475569">and accumulated shortcuts.</text>
+  <line x1="120" y1="350" x2="360" y2="350" stroke="#e2e8f0"/>
+  <text x="120" y="388" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#64748b">MANAGEMENT CONCERN</text>
+  <text x="120" y="420" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">Engineering sustainability</text>
+
+  <rect x="450" y="165" width="300" height="300" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="505" cy="220" r="24" fill="#e2e8f0"/>
+  <text x="505" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#334155">2</text>
+  <text x="540" y="228" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#0f172a">Security Debt</text>
+  <text x="480" y="285" font-family="Arial, sans-serif" font-size="17" fill="#475569">Unresolved weaknesses</text>
+  <text x="480" y="312" font-family="Arial, sans-serif" font-size="17" fill="#475569">and control gaps.</text>
+  <line x1="480" y1="350" x2="720" y2="350" stroke="#e2e8f0"/>
+  <text x="480" y="388" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#64748b">MANAGEMENT CONCERN</text>
+  <text x="480" y="420" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">Security resilience</text>
+
+  <rect x="810" y="165" width="300" height="300" rx="24" fill="#fffbeb" stroke="#fbbf24" stroke-width="3"/>
+  <circle cx="865" cy="220" r="24" fill="#fef3c7"/>
+  <text x="865" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#92400e">3</text>
+  <text x="900" y="228" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#78350f">AI Governance Debt</text>
+  <text x="840" y="285" font-family="Arial, sans-serif" font-size="17" fill="#57534e">Governance capability failing</text>
+  <text x="840" y="312" font-family="Arial, sans-serif" font-size="17" fill="#57534e">to keep pace with AI.</text>
+  <line x1="840" y1="350" x2="1080" y2="350" stroke="#fde68a"/>
+  <text x="840" y="388" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#92400e">MANAGEMENT CONCERN</text>
+  <text x="840" y="420" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#78350f">Governance capability</text>
+
+  <path d="M390 315 C420 285,420 285,450 315" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M750 315 C780 285,780 285,810 315" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="600" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#334155">Where they intersect</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#64748b">Technical limitations can become safety or compliance concerns.</text>
+  <text x="600" y="588" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#64748b">Security vulnerabilities can become governance issues.</text>
+  <text x="600" y="616" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#64748b">Governance gaps can create security and safety risk.</text>
+  <rect x="370" y="650" width="460" height="38" rx="19" fill="#0f172a"/>
+  <text x="600" y="675" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Well engineered + secure ≠ necessarily well governed</text>
+</svg>
