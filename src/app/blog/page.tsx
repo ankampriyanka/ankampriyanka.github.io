@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const articles = [
   {
-    title: "AI Governance Debt: The Risk We Don&apos;t See",
+    title: "AI Governance Debt: The Risk We Don't See",
     description:
       "A proposed research lens for understanding the growing gap between the governance an AI portfolio requires and the governance capability an organization has in place.",
     category: "AI Governance",
