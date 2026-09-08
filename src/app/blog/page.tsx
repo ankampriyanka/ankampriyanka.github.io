@@ -44,10 +44,7 @@ export default function BlogPage() {
                 {article.category}
               </p>
               <h3 className="mt-4 text-2xl font-bold tracking-tight">
-                <Link
-                  href={article.href}
-                  className="transition group-hover:underline"
-                >
+                <Link href={article.href} className="transition group-hover:underline">
                   {article.title}
                 </Link>
               </h3>
