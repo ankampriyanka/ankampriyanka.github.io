@@ -4,33 +4,33 @@ export const profile: Profile = {
   name: "Ankam Priyanka",
 
   title:
-    "Senior Engineer – Program Management & Product Operations",
+    "AI Governance, Responsible AI & AI Assurance Leader",
 
   tagline:
-    "Program Management • Responsible AI • AI Safety",
+    "AI Governance • Responsible AI • AI Assurance • Program Leadership",
 
   description:
-    "Program Management leader with 14+ years of experience delivering enterprise-scale engineering programs while driving Responsible AI, AI Governance, Product Operations, and AI Safety initiatives.",
+    "AI Governance, Responsible AI & AI Assurance leader with 14+ years of enterprise experience spanning AI governance, transformation, program management, engineering operations and strategic delivery across Mercedes-Benz Research & Development, Collins Aerospace, PeopleStrong & Chetak Enterprises, and L&T.",
 
   location: "Bengaluru, India",
 
   yearsExperience: 14,
 
   currentRole:
-    "Senior Engineer – Program Management",
+    "AI Governance Lead and Product Management",
 
   company:
     "Mercedes-Benz Research & Development India",
 
   interests: [
+    "AI Governance",
     "Responsible AI",
+    "AI Assurance",
     "AI Safety",
-    "Governance",
-    "Program Management",
-    "Automotive AI",
+    "AI Trust",
+    "AI Risk",
     "LLMs",
     "RAG",
-    "AI Trust",
   ],
 
   social: {
