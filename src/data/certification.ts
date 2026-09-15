@@ -5,15 +5,15 @@ export const certifications: Certification[] = [
     id: 1,
     name: "Project Management Professional (PMP®)",
     issuer: "Project Management Institute",
-    year: "2022",
+    year: "Listed on current resume",
     status: "Active",
   },
 
   {
     id: 2,
-    name: "SAFe® 6 Scrum Master",
+    name: "SAFe® Scrum Master (SSM)",
     issuer: "Scaled Agile",
-    year: "2023",
+    year: "Listed on current resume",
     status: "Active",
   },
 
@@ -21,7 +21,7 @@ export const certifications: Certification[] = [
     id: 3,
     name: "Certified Scrum Master (CSM®)",
     issuer: "Scrum Alliance",
-    year: "2021",
+    year: "Listed on current resume",
     status: "Active",
   },
 
@@ -29,23 +29,31 @@ export const certifications: Certification[] = [
     id: 4,
     name: "Lean Six Sigma Green Belt",
     issuer: "Lean Six Sigma",
-    year: "2021",
+    year: "Listed on current resume",
     status: "Active",
   },
 
   {
     id: 5,
-    name: "Post Graduate Program in AI & Machine Learning",
-    issuer: "Great Learning",
-    year: "2024",
-    status: "Completed",
+    name: "EU AI Act",
+    issuer: "AI Governance / Regulatory Standard",
+    year: "Current standard",
+    status: "Active",
   },
 
   {
     id: 6,
-    name: "Doctor of Business Administration",
-    issuer: "Walsh College",
-    year: "2024 - Present",
+    name: "NIST AI Risk Management Framework (AI RMF)",
+    issuer: "NIST",
+    year: "Current framework",
+    status: "Active",
+  },
+
+  {
+    id: 7,
+    name: "OWASP",
+    issuer: "OWASP",
+    year: "Current standard",
     status: "Active",
   },
 ];
