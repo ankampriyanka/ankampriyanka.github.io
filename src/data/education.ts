@@ -3,14 +3,14 @@ import { Education } from "@/types/education";
 export const education: Education[] = [
   {
     id: 1,
-    degree: "Doctor of Business Administration (DBA)",
+    degree: "Doctorate in Business Administration",
     specialization: "Artificial Intelligence & Machine Learning",
     institution: "Walsh College",
-    duration: "2024 - Present",
-    location: "India",
+    duration: "Current",
+    location: "Bengaluru, India",
     status: "In Progress",
     description:
-      "Research focused on Responsible AI, AI Governance, AI Safety, Trustworthy AI Systems, Driver Monitoring Systems (DMS), and enterprise AI evaluation methodologies.",
+      "Doctoral research focused on trustworthy AI evaluation methodologies, AI safety and measurable trustworthiness for enterprise AI systems and Driver Monitoring Systems.",
   },
 
   {
@@ -18,22 +18,22 @@ export const education: Education[] = [
     degree: "Post Graduate Program",
     specialization: "Artificial Intelligence & Machine Learning",
     institution: "Great Learning",
-    duration: "2023 - 2024",
-    location: "India",
+    duration: "Sep 2024 – Oct 2025",
+    location: "Bengaluru, India",
     status: "Completed",
     description:
-      "Hands-on learning in Machine Learning, Deep Learning, NLP, Computer Vision, LLMs, RAG, and AI applications.",
+      "Applied learning in AI and machine learning with a focus on emerging AI technologies and practical AI applications.",
   },
 
   {
     id: 3,
-    degree: "Bachelor of Technology",
-    specialization: "Electrical & Electronics Engineering",
-    institution: "SV University",
-    duration: "2008 - 2012",
+    degree: "B. Tech",
+    specialization: "Engineering",
+    institution: "SV University College of Engineering",
+    duration: "Sep 2008 – May 2010",
     location: "India",
     status: "Completed",
     description:
-      "Built strong engineering fundamentals in electrical systems, mathematics, programming, and engineering design.",
+      "Engineering foundation supporting a career spanning engineering programs, enterprise operations, technology transformation and AI governance.",
   },
 ];
