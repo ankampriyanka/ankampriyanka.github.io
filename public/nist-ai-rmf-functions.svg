@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">NIST AI Risk Management Framework: Govern, Map, Measure and Manage</title>
+<desc id="desc">A conceptual visual showing GOVERN as the cross-cutting foundation, with MAP, MEASURE and MANAGE forming an iterative risk management loop.</desc>
+<rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+<text x="70" y="70" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#0f172a">NIST AI Risk Management Framework</text>
+<text x="70" y="105" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#64748b">GOVERN is cross-cutting; MAP, MEASURE and MANAGE form an iterative risk-management cycle.</text>
+
+<rect x="70" y="155" width="1060" height="120" rx="22" fill="#0f172a"/>
+<text x="105" y="205" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#ffffff">01 · GOVERN</text>
+<text x="105" y="238" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#e2e8f0">Policies · accountability · risk tolerance · competencies · lifecycle oversight</text>
+<text x="925" y="222" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#67e8f9">CROSS-CUTTING</text>
+
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="95" y="340" width="300" height="190" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="125" y="390" font-size="25" font-weight="700" fill="#0f172a">02 · MAP</text>
+<text x="125" y="425" font-size="17" font-weight="700" fill="#0e7490">Understand context</text>
+<text x="125" y="458" font-size="15" fill="#475569">Purpose, users, affected groups,</text>
+<text x="125" y="482" font-size="15" fill="#475569">system capabilities, limitations,</text>
+<text x="125" y="506" font-size="15" fill="#475569">dependencies and potential impacts.</text>
+
+<rect x="450" y="340" width="300" height="190" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="390" font-size="25" font-weight="700" fill="#0f172a">03 · MEASURE</text>
+<text x="480" y="425" font-size="17" font-weight="700" fill="#0e7490">Build evidence</text>
+<text x="480" y="458" font-size="15" fill="#475569">Testing, metrics, TEVV, analysis,</text>
+<text x="480" y="482" font-size="15" fill="#475569">failure modes and monitoring.</text>
+<text x="480" y="506" font-size="15" fill="#475569">Evidence should be risk-relevant.</text>
+
+<rect x="805" y="340" width="300" height="190" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="835" y="390" font-size="25" font-weight="700" fill="#0f172a">04 · MANAGE</text>
+<text x="835" y="425" font-size="17" font-weight="700" fill="#0e7490">Turn evidence into action</text>
+<text x="835" y="458" font-size="15" fill="#475569">Prioritize, treat and assign</text>
+<text x="835" y="482" font-size="15" fill="#475569">ownership; proceed, change,</text>
+<text x="835" y="506" font-size="15" fill="#475569">pause or stop.</text>
+</g>
+
+<g stroke="#0891b2" stroke-width="4" fill="none" stroke-linecap="round">
+<path d="M395 435 C415 405 425 405 450 435"/>
+<path d="M750 435 C775 405 785 405 805 435"/>
+<path d="M950 550 C850 625 350 625 250 550"/>
+</g>
+<g fill="#0891b2">
+<polygon points="448,435 430,423 432,445"/>
+<polygon points="803,435 785,423 787,445"/>
+<polygon points="250,550 268,545 258,563"/>
+</g>
+
+<rect x="235" y="600" width="730" height="58" rx="29" fill="#ecfeff" stroke="#a5f3fc"/>
+<text x="600" y="637" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#155e75">MAP → MEASURE → MANAGE → LEARN → MAP</text>
+</svg>
