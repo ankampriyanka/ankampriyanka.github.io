@@ -11,53 +11,57 @@ const functions = [
   {
     number: "01",
     title: "GOVERN",
-    subtitle: "Establish who is accountable",
-    text: "Responsible AI starts before a model is built. Organizations need clear policies, accountability, risk tolerance, decision rights and governance mechanisms. Governance defines who owns AI risk, what standards apply, and when human oversight or escalation is required.",
-    points: [
-      "AI policies, processes and accountability are explicit",
-      "Legal and regulatory requirements are understood and documented",
-      "Risk tolerance determines the level of governance needed",
-      "Roles, competencies and decision rights are defined",
-      "Governance spans design, development, deployment and monitoring",
+    subtitle: "Create the organizational conditions in which AI risk can be consistently managed.",
+    question: "Who decides what responsible AI means here — and how do we make that decision enforceable?",
+    text: "GOVERN is the foundation for the other three functions. It establishes the policies, accountability, risk tolerance, roles, competencies and decision rights needed to manage AI risk consistently across the organization and throughout the AI lifecycle.",
+    areas: [
+      "Foundation — policies, accountability, legal and regulatory requirements, risk tolerance",
+      "People + culture — roles, competencies, decision rights and organizational responsibility",
+      "Lifecycle — governance across design, development, deployment and monitoring",
+      "Third-party AI, data and technology dependencies are included in governance",
+      "Documentation, transparency and escalation mechanisms support accountable decisions",
     ],
   },
   {
     number: "02",
     title: "MAP",
-    subtitle: "Understand the AI system in context",
-    text: "MAP establishes the context before deciding how much risk is acceptable. The same model can present very different risks depending on where it is deployed, who uses it, what decisions it influences and who may be affected.",
-    points: [
-      "Define the intended purpose and operating context",
-      "Identify users, affected groups and stakeholders",
-      "Understand system capabilities, limitations and dependencies",
-      "Identify potential benefits, harms and unintended consequences",
-      "Create a shared risk picture that informs measurement and monitoring",
+    subtitle: "Understand the AI system in context before deciding how much risk is acceptable.",
+    question: "What are we building or deploying, for what purpose, for whom, and what could go wrong in this context?",
+    text: "MAP establishes a shared risk picture. It connects the technical system to its intended purpose, operating environment, stakeholders, affected groups, assumptions, dependencies, limitations and potential impacts. Risk cannot be understood independently of context.",
+    areas: [
+      "Purpose — define intended use, objectives and expected outcomes",
+      "Context — understand the socio-technical environment and stakeholders",
+      "Impact — identify potential benefits, harms and affected groups",
+      "Risk — identify assumptions, limitations, dependencies and plausible failure modes",
+      "Output — create a shared risk picture that informs testing, measurement and monitoring",
     ],
   },
   {
     number: "03",
     title: "MEASURE",
-    subtitle: "Turn risk into evidence",
-    text: "Identifying a risk is not enough. MEASURE turns the risks identified in MAP into evidence that can be tested, tracked and challenged. The objective is not to collect as many metrics as possible, but to generate credible evidence relevant to the risk and context.",
-    points: [
-      "Select methods and metrics for significant risks",
-      "Test performance, robustness, safety, security, fairness and privacy as relevant",
-      "Use appropriate testing, evaluation, verification and validation approaches",
-      "Analyze errors, limitations and failure modes",
-      "Monitor changes and reassess measurement and control effectiveness",
+    subtitle: "Turn the risks identified in MAP into evidence that can be tested, tracked and challenged.",
+    question: "What evidence do we need to determine whether the identified risks are actually being controlled?",
+    text: "MEASURE is not about collecting as many metrics as possible. It is about building credible evidence for a risk decision. Methods and metrics should be selected for significant risks and applied through appropriate testing, evaluation, verification, validation and monitoring.",
+    areas: [
+      "Test / Evaluate — select methods and metrics for significant risks",
+      "Assess performance, robustness, safety, security, fairness and privacy as relevant",
+      "Interpret / Analyze — examine errors, limitations and failure modes",
+      "Use testing, evaluation, verification and validation (TEVV) as appropriate",
+      "Monitor / Track — detect changes and reassess evidence and control effectiveness",
     ],
   },
   {
     number: "04",
     title: "MANAGE",
-    subtitle: "Convert evidence into decisions",
-    text: "MANAGE is where AI risk management becomes operational. Evidence from MAP and MEASURE needs to lead to action: mitigate, transfer, avoid or accept a risk within defined tolerance. The responsible decision may be to proceed, change the system, pause deployment or stop.",
-    points: [
-      "Identify and prioritize risks based on impact, likelihood and resources",
-      "Assign owners, actions, resources and timelines",
-      "Choose appropriate risk treatment responses",
-      "Decide whether to proceed, modify, pause or stop",
-      "Monitor and reassess as context, evidence and risks change",
+    subtitle: "Use the evidence from MAP + MEASURE to prioritize risks and decide what happens next.",
+    question: "Given what we know, what should we do about the risk — and who is accountable for the decision?",
+    text: "MANAGE converts risk evidence into management action. Risks are identified and prioritized, appropriate responses are selected, and decisions are made within defined risk tolerance. A mature governance process must be able to support proceeding, changing, pausing or stopping an AI system.",
+    areas: [
+      "Identify and prioritize risks using impact, likelihood and available resources",
+      "Treat risks through mitigation, transfer, avoidance or acceptance as appropriate",
+      "Assign owners, actions, resources and timelines for high-priority risks",
+      "Decide whether to proceed, change, pause or stop",
+      "Monitor outcomes and feed incidents, new evidence and changed assumptions back into the cycle",
     ],
   },
 ];
@@ -81,8 +85,17 @@ function FunctionCard({ item }: { item: (typeof functions)[number] }) {
 
       <p className="mt-5 leading-7">{item.text}</p>
 
-      <ul className="mt-5 list-disc space-y-2 pl-5 text-sm leading-6 marker:text-slate-400">
-        {item.points.map((point) => (
+      <div className="mt-6 rounded-xl border border-cyan-100 bg-cyan-50/70 p-4 dark:border-cyan-300/10 dark:bg-cyan-400/5">
+        <p className="font-sans text-xs font-bold uppercase tracking-[0.14em] text-cyan-800 dark:text-cyan-300">
+          Practical question
+        </p>
+        <p className="mt-2 font-sans text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100">
+          {item.question}
+        </p>
+      </div>
+
+      <ul className="mt-6 list-disc space-y-2 pl-5 text-sm leading-6 marker:text-slate-400">
+        {item.areas.map((point) => (
           <li key={point}>{point}</li>
         ))}
       </ul>
@@ -117,11 +130,11 @@ export default function NistAiRmfPage() {
             </p>
 
             <p className="mb-7">
-              The NIST AI Risk Management Framework (AI RMF) 1.0 provides a useful way to structure that thinking. Its Core is organized around four functions: <strong className="font-sans font-bold text-slate-950 dark:text-white">GOVERN, MAP, MEASURE and MANAGE</strong>. NIST describes these as high-level functions for managing AI risks, with GOVERN designed as a cross-cutting function that informs the other three.
+              The NIST AI Risk Management Framework (AI RMF) 1.0 provides a structured way to think about AI risk across the lifecycle. At its core are four functions: <strong className="font-sans font-bold text-slate-950 dark:text-white">GOVERN, MAP, MEASURE and MANAGE</strong>. These functions are complementary rather than a simple sequence, with GOVERN providing the organizational foundation that remains relevant across the lifecycle.
             </p>
 
             <p className="mb-10">
-              The important point is that this should not be interpreted as a rigid checklist or a one-time implementation exercise. NIST describes the framework as iterative and risk-based, with the functions applied and cross-referenced throughout the AI lifecycle.
+              The framework should not be treated as a rigid checklist or a one-time implementation strategy. Real-world AI systems change, models evolve, vulnerabilities emerge and unexpected impacts may only become visible after deployment. Risk management therefore needs to operate as a continuous capability.
             </p>
 
             <section className="mb-12 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900/60 sm:p-7">
@@ -155,7 +168,7 @@ export default function NistAiRmfPage() {
                 />
               </div>
               <figcaption className="mt-3 text-center font-sans text-xs leading-5 text-slate-500 dark:text-slate-400">
-                A practical view of the four NIST AI RMF functions and how they connect across the AI lifecycle.
+                A practical view of the four NIST AI RMF functions and their relationship across the AI lifecycle.
               </figcaption>
             </figure>
 
@@ -164,13 +177,13 @@ export default function NistAiRmfPage() {
                 From framework to continuous capability
               </h2>
               <p className="mb-6">
-                In practice, the four functions should create a feedback loop. MAP establishes the context and identifies risks. MEASURE generates evidence about those risks. MANAGE converts that evidence into decisions and actions. New incidents, monitoring results, changed assumptions and new evidence can then feed back into MAP and MEASURE.
+                The functions become more useful when treated as an operating loop rather than four isolated activities. MAP establishes the context and risk picture. MEASURE turns significant risks into evidence. MANAGE uses that evidence to prioritize, treat and decide. Then incidents, monitoring results, evaluation findings and changed assumptions create new organizational learning that can change the next MAP cycle.
               </p>
               <div className="rounded-2xl bg-slate-950 px-5 py-6 text-center font-sans font-bold text-white dark:bg-white dark:text-slate-950 sm:px-7 sm:py-7 sm:text-lg">
                 MAP → MEASURE → MANAGE → LEARN → MAP
               </div>
               <p className="mt-5 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                The <strong className="font-sans">LEARN</strong> step in this visual loop is my practical interpretation rather than an additional NIST function: it represents organizational learning from incidents, monitoring, evaluation results and changing context before the next MAP cycle.
+                The <strong className="font-sans">LEARN</strong> step is my practical interpretation of the organizational feedback loop, not a fifth NIST AI RMF function. It represents learning from incidents, monitoring, evaluation results and changes in context before the next MAP cycle.
               </p>
             </section>
 
@@ -179,28 +192,28 @@ export default function NistAiRmfPage() {
                 Why this matters for AI Governance Debt
               </h2>
               <p className="mb-6">
-                This also connects directly to my AI Governance Debt research. A governance framework can exist on paper while governance capability falls behind the scale and complexity of an organization&apos;s AI portfolio. GOVERN establishes the organizational foundation; MAP makes the portfolio and its risks understandable; MEASURE creates evidence; and MANAGE turns that evidence into action.
+                This connects directly to my AI Governance Debt research. An organization can have policies and processes on paper while its governance capability falls behind the scale and complexity of its AI portfolio. GOVERN establishes the organizational conditions; MAP makes the portfolio and its risks understandable; MEASURE creates credible evidence; and MANAGE turns that evidence into action.
               </p>
               <p className="rounded-2xl border border-cyan-200 bg-cyan-50 px-5 py-6 font-sans text-base font-medium leading-7 text-cyan-950 dark:border-cyan-300/20 dark:bg-cyan-400/10 dark:text-cyan-100 sm:px-7 sm:text-lg">
-                The real value of an AI risk framework is not the existence of the framework. It is the organization&apos;s ability to repeatedly use it to make better decisions as AI systems, risks and contexts evolve.
+                The real value of an AI risk framework is not the existence of the framework. It is the organization&apos;s ability to repeatedly use it to make better decisions as AI systems, risks, evidence and contexts evolve.
               </p>
             </section>
 
             <section className="mb-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-7">
               <h2 className="font-sans text-xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-2xl">
-                Explore the presentation
+                Executive presentation
               </h2>
               <p className="mt-3 leading-7">
-                I created an executive presentation that summarizes the four functions, their practical questions, expected outputs and the connection between risk analysis and management decisions.
+                I also created an executive presentation that condenses the four functions into a practical view of their purpose, key areas, evidence and management decisions. The presentation follows the same framing used in this article.
               </p>
-              <p className="mt-5 font-sans text-sm font-semibold text-slate-600 dark:text-slate-300">
-                The presentation will be added here as a downloadable PDF: <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs dark:bg-slate-800">/presentations/NIST_AI_RMF_4_Functions_Executive_Deck.pdf</code>
-              </p>
+              <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 font-sans text-sm leading-6 text-slate-600 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
+                <strong className="text-slate-900 dark:text-white">Deck structure:</strong> GOVERN → organizational foundation and accountability · MAP → purpose, context, impact and risk · MEASURE → test, analyze and monitor · MANAGE → identify, prioritize, treat and decide.
+              </div>
             </section>
 
             <section className="mb-12 border-b border-slate-200 pb-10 dark:border-slate-800">
               <h2 className="mb-4 font-sans text-xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-2xl">
-                A few questions I am exploring
+                Questions I am exploring
               </h2>
               <ul className="list-disc space-y-2.5 pl-6">
                 <li>How do organizations turn AI RMF outcomes into measurable governance controls?</li>
@@ -218,10 +231,13 @@ export default function NistAiRmfPage() {
                 <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950 dark:hover:text-white" href="https://airc.nist.gov/airmf-resources/playbook/" target="_blank" rel="noreferrer">NIST AI RMF Playbook</a></li>
                 <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950 dark:hover:text-white" href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noreferrer">NIST AI Risk Management Framework</a></li>
               </ol>
+              <p className="mt-5 text-xs leading-6 text-slate-500 dark:text-slate-400">
+                Note: NIST AI RMF 1.0 is currently being revised. This article and the accompanying presentation summarize AI RMF 1.0 and its current companion resources.
+              </p>
             </section>
 
             <aside className="mt-8 rounded-xl bg-slate-50 p-4 font-sans text-xs leading-6 text-slate-600 dark:bg-slate-900/70 dark:text-slate-400">
-              <strong className="text-slate-900 dark:text-slate-200">Author note:</strong> This article is a practical interpretation of NIST AI RMF 1.0. The framework and its four functions are NIST terminology; the MAP → MEASURE → MANAGE → LEARN → MAP loop is presented as my own operational interpretation.
+              <strong className="text-slate-900 dark:text-slate-200">Author note:</strong> This article is a practical interpretation of NIST AI RMF 1.0. GOVERN, MAP, MEASURE and MANAGE are NIST terminology; the MAP → MEASURE → MANAGE → LEARN → MAP loop is presented as my own operational interpretation rather than an additional NIST function.
             </aside>
           </div>
         </article>
