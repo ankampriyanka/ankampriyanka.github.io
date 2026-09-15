@@ -4,6 +4,14 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const articles = [
   {
+    title: "NIST AI Risk Management Framework: GOVERN, MAP, MEASURE & MANAGE",
+    description:
+      "A practical perspective on turning the NIST AI RMF into a continuous AI risk management capability across governance, context, evidence and decisions.",
+    category: "AI Governance · NIST AI RMF",
+    href: "/blog/nist-ai-rmf",
+    date: "September 2026",
+  },
+  {
     title: "AI Governance Debt: The Risk We Don't See",
     description:
       "A proposed research lens for understanding the growing gap between the governance an AI portfolio requires and the governance capability an organization has in place.",
