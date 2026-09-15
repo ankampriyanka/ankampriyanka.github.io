@@ -199,15 +199,34 @@ export default function NistAiRmfPage() {
               </p>
             </section>
 
-            <section className="mb-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-7">
-              <h2 className="font-sans text-xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-2xl">
-                Executive presentation
-              </h2>
-              <p className="mt-3 leading-7">
-                I also created an executive presentation that condenses the four functions into a practical view of their purpose, key areas, evidence and management decisions. The presentation follows the same framing used in this article.
-              </p>
-              <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 font-sans text-sm leading-6 text-slate-600 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
-                <strong className="text-slate-900 dark:text-white">Deck structure:</strong> GOVERN → organizational foundation and accountability · MAP → purpose, context, impact and risk · MEASURE → test, analyze and monitor · MANAGE → identify, prioritize, treat and decide.
+            <section className="mb-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <div className="p-6 sm:p-7">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <p className="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-cyan-700 dark:text-cyan-300">
+                      Executive deck
+                    </p>
+                    <h2 className="mt-2 font-sans text-xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-2xl">
+                      NIST AI RMF — GOVERN · MAP · MEASURE · MANAGE
+                    </h2>
+                    <p className="mt-3 max-w-2xl leading-7">
+                      The five-page executive deck distills the four functions into practical questions, key areas, evidence and management decisions, followed by official NIST resources and links.
+                    </p>
+                  </div>
+                  <a
+                    href="/NIST_AI_RMF_4_Functions_Executive_Deck.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex shrink-0 items-center justify-center rounded-xl bg-slate-950 px-5 py-3 font-sans text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200"
+                  >
+                    View / Download Deck ↗
+                  </a>
+                </div>
+              </div>
+              <div className="border-t border-slate-200 bg-slate-50 px-6 py-4 dark:border-slate-800 dark:bg-slate-950/60">
+                <p className="font-sans text-xs text-slate-500 dark:text-slate-400">
+                  GOVERN → organizational foundation and accountability · MAP → purpose, context, impact and risk · MEASURE → test, analyze and monitor · MANAGE → identify, prioritize, treat and decide.
+                </p>
               </div>
             </section>
 
