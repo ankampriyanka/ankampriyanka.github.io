@@ -23,6 +23,7 @@ export const walshResearchPortfolio: PortfolioItem[] = [
     description:
       "A dedicated space for Walsh College doctoral work and organizational research assignments, including research-led work in trustworthy AI, Responsible AI, AI safety, AI assurance and governance.",
     category: "Walsh College · DBA AI/ML",
+    link: "https://www.mygreatlearning.com/eportfolio/priyanka-ankam2",
     status: "Reserved",
   },
 ];
