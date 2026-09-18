@@ -1,8 +1,9 @@
 import Container from "@/components/layout/Container";
+import PageNavigation from "@/components/layout/PageNavigation";
 
 export default function UnderstandingAIBOMPage() {
   return (
-    <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-slate-950 dark:text-white">
+    <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-white dark:text-[#4E537D]">
       <Container>
         <article className="mx-auto max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
@@ -13,18 +14,18 @@ export default function UnderstandingAIBOMPage() {
             Understanding AI Bill of Materials (AIBOM)
           </h1>
 
-          <p className="mt-6 text-xl leading-8 text-slate-600 dark:text-slate-300">
+          <p className="mt-6 text-xl leading-8 text-slate-600 dark:text-slate-600">
             From software inventory to AI supply-chain visibility.
           </p>
 
-          <div className="mt-10 space-y-10 text-lg leading-8 text-slate-700 dark:text-slate-300">
+          <div className="mt-10 space-y-10 text-lg leading-8 text-slate-700 dark:text-slate-600">
             <section>
               <p>
                 As organizations move from experimenting with AI to deploying
                 production-grade AI systems, one question becomes increasingly
                 important:
               </p>
-              <blockquote className="my-6 border-l-4 border-cyan-400 pl-6 text-xl font-medium text-slate-900 dark:text-white">
+              <blockquote className="my-6 border-l-4 border-cyan-400 pl-6 text-xl font-medium text-slate-900 dark:text-[#4E537D]">
                 Do we actually know what our AI systems depend on?
               </blockquote>
               <p>
@@ -40,7 +41,7 @@ export default function UnderstandingAIBOMPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-[#4E537D]">
                 AI Dependencies Accumulate Across the Lifecycle
               </h2>
               <p className="mt-4">
@@ -59,14 +60,14 @@ export default function UnderstandingAIBOMPage() {
                 or risk profile of the AI system changes. That creates a
                 governance question:
               </p>
-              <blockquote className="my-6 border-l-4 border-cyan-400 pl-6 text-xl font-medium text-slate-900 dark:text-white">
+              <blockquote className="my-6 border-l-4 border-cyan-400 pl-6 text-xl font-medium text-slate-900 dark:text-[#4E537D]">
                 If the system changes without a corresponding code change,
                 where is that change recorded?
               </blockquote>
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-[#4E537D]">
                 SBOM Is Necessary — But AI Needs More
               </h2>
               <p className="mt-4">
@@ -89,7 +90,7 @@ export default function UnderstandingAIBOMPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-[#4E537D]">
                 Why Is AIBOM a Governance Artifact?
               </h2>
               <p className="mt-4">
@@ -107,10 +108,10 @@ export default function UnderstandingAIBOMPage() {
                 ].map(([number, title]) => (
                   <div
                     key={number}
-                    className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
+                    className="rounded-2xl border border-[#C0CAD6] bg-[#EBEEF3] p-6"
                   >
                     <p className="text-sm font-semibold text-cyan-300">{number}</p>
-                    <h3 className="mt-3 text-xl font-semibold text-white">
+                    <h3 className="mt-3 text-xl font-semibold text-[#4E537D]">
                       {title}
                     </h3>
                   </div>
@@ -119,7 +120,7 @@ export default function UnderstandingAIBOMPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-[#4E537D]">
                 What Does an AI BOM Consist Of?
               </h2>
               <p className="mt-4">
@@ -158,12 +159,12 @@ export default function UnderstandingAIBOMPage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
+                    className="rounded-2xl border border-[#C0CAD6] bg-[#EBEEF3] p-6"
                   >
-                    <h3 className="text-xl font-semibold text-white">
+                    <h3 className="text-xl font-semibold text-[#4E537D]">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-base leading-7 text-slate-300">
+                    <p className="mt-2 text-base leading-7 text-slate-600">
                       {item.text}
                     </p>
                   </div>
@@ -171,8 +172,8 @@ export default function UnderstandingAIBOMPage() {
               </div>
             </section>
 
-            <section className="border-t border-slate-800 pt-10">
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+            <section className="border-t border-[#C0CAD6] pt-10">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-[#4E537D]">
                 The Shift: From Inventory to Evidence
               </h2>
               <p className="mt-4">
@@ -181,7 +182,7 @@ export default function UnderstandingAIBOMPage() {
                 dependencies visible and giving an organization a record that
                 can support later decisions, reviews and assurance activities.
               </p>
-              <blockquote className="my-6 border-l-4 border-cyan-400 pl-6 text-xl font-medium text-slate-900 dark:text-white">
+              <blockquote className="my-6 border-l-4 border-cyan-400 pl-6 text-xl font-medium text-slate-900 dark:text-[#4E537D]">
                 An AI system is no longer just code + model.
               </blockquote>
               <p>
@@ -196,7 +197,7 @@ export default function UnderstandingAIBOMPage() {
               <p className="text-sm font-semibold uppercase tracking-wider text-cyan-300">
                 Part 2
               </p>
-              <h2 className="mt-3 text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="mt-3 text-3xl font-bold text-slate-900 dark:text-[#4E537D]">
                 From AIBOM to a Living Governance Artifact
               </h2>
               <p className="mt-4">
@@ -206,13 +207,14 @@ export default function UnderstandingAIBOMPage() {
               </p>
             </section>
 
-            <p className="border-t border-slate-800 pt-8 text-sm leading-6 text-slate-500 dark:text-slate-400">
+            <p className="border-t border-[#C0CAD6] pt-8 text-sm leading-6 text-slate-500 dark:text-slate-600">
               This article is based on the concepts and terminology in the
               OWASP AI Bill of Materials (AIBOM) project materials.
             </p>
           </div>
         </article>
       </Container>
-    </main>
+    <PageNavigation current="/blog" />
+      </main>
   );
 }
