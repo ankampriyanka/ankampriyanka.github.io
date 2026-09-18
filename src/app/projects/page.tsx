@@ -10,7 +10,7 @@ import { projects } from "@/data/projects";
 export default function ProjectsPage() {
   return (
     <><Navbar />
-      <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-white dark:text-[#4E537D]">
+      <main className="min-h-screen bg-white py-24 text-slate-900">
       <Container>
         <SectionHeading
           title="Projects"
