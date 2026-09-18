@@ -1,48 +1,23 @@
 import Card from "@/components/ui/Card";
 import { Project } from "@/types/project";
 
-type Props = {
-  project: Project;
-};
+type Props = { project: Project };
 
 export default function ProjectCard({ project }: Props) {
   return (
     <Card>
-      <div className="space-y-4">
-
-        <div className="flex items-center justify-between">
-
-          <span className="rounded-full bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-700">
-            {project.category}
-          </span>
-
-          <span className="text-sm text-gray-500">
-            {project.status}
-          </span>
-
+      <div className="flex h-full flex-col">
+        <div className="flex items-center justify-between gap-3">
+          <span className="rounded-full border border-[#C0CAD6] bg-[#EBEEF3] px-3 py-1 text-xs font-medium text-[#4E537D]">{project.category}</span>
+          <span className="text-xs font-medium text-slate-500">{project.status}</span>
         </div>
-
-        <h3 className="text-2xl font-semibold">
-          {project.title}
-        </h3>
-
-        <p className="text-gray-600">
-          {project.description}
-        </p>
-
-        <div className="flex flex-wrap gap-2">
-
+        <h3 className="mt-5 text-2xl font-semibold tracking-tight text-[#4E537D]">{project.title}</h3>
+        <p className="mt-3 flex-grow text-sm leading-7 text-slate-600">{project.description}</p>
+        <div className="mt-6 flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="rounded bg-gray-100 px-2 py-1 text-xs"
-            >
-              {tech}
-            </span>
+            <span key={tech} className="rounded-lg bg-[#EBEEF3] px-2.5 py-1 text-xs text-slate-700">{tech}</span>
           ))}
-
         </div>
-
       </div>
     </Card>
   );
