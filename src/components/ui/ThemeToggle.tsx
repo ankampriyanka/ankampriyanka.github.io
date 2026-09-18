@@ -16,7 +16,7 @@ export default function ThemeToggle() {
     return (
       <button
         aria-label="Toggle theme"
-        className="rounded-lg border border-gray-300 p-2"
+        className="rounded-xl border border-slate-700 p-2.5 text-slate-300"
       >
         <FaMoon />
       </button>
@@ -29,17 +29,9 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      aria-label={
-        isDark
-          ? "Switch to light mode"
-          : "Switch to dark mode"
-      }
-      title={
-        isDark
-          ? "Switch to light mode"
-          : "Switch to dark mode"
-      }
-      className="rounded-lg border border-gray-300 p-2 transition hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      className="rounded-xl border border-slate-700 p-2.5 text-slate-300 transition hover:border-cyan-400/60 hover:bg-slate-800 hover:text-cyan-300"
     >
       {isDark ? <FaSun /> : <FaMoon />}
     </button>
