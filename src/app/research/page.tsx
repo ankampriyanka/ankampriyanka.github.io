@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 import Container from "@/components/layout/Container";
 import ResearchCard from "@/components/research/ResearchCard";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -6,7 +8,8 @@ import { research } from "@/data/research";
 
 export default function ResearchPage() {
   return (
-    <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-slate-950 dark:text-white">
+    <><Navbar />
+      <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-white dark:text-[#4E537D]">
       <Container>
         <SectionHeading
           title="Research"
@@ -24,5 +27,6 @@ export default function ResearchPage() {
         <PageNavigation current="/research" />
       </Container>
     </main>
+      <Footer /></>
   );
 }
