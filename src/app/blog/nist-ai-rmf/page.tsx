@@ -173,7 +173,6 @@ export default function NistAiRmfPage() {
       </Container>
     <PageNavigation current="/blog" />
       </main>
-  );
       <Footer />
     </>
   );
