@@ -1,12 +1,10 @@
 import { ReactNode } from "react";
 
-type CardProps = {
-  children: ReactNode;
-};
+type CardProps = { children: ReactNode };
 
 export default function Card({ children }: CardProps) {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900 hover:shadow-xl">
+    <div className="rounded-2xl border border-[#C0CAD6] bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#4E537D]/50 hover:shadow-md">
       {children}
     </div>
   );
