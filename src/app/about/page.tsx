@@ -34,8 +34,7 @@ export default function AboutPage() {
         </div>
         <PageNavigation current="/about" />
       </Container>
-    </main>
-  );
+      </main>
       <Footer />
     </>
   );
