@@ -1,3 +1,5 @@
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Container from "@/components/layout/Container";
 import PageNavigation from "@/components/layout/PageNavigation";
@@ -21,7 +23,7 @@ const debtSignals = [
 
 function DebtHighlight() {
   return (
-    <strong className="rounded-md bg-amber-100 px-1.5 py-0.5 font-sans text-[0.92em] font-bold text-amber-950 ring-1 ring-inset ring-amber-200 dark:bg-amber-400/15 dark:text-amber-200 dark:ring-amber-300/20">
+    <strong className="rounded-md bg-amber-100 px-1.5 py-0.5 font-sans text-[0.92em] font-bold text-amber-950 ring-1 ring-inset ring-amber-200">
       AI Governance Debt
     </strong>
   );
@@ -29,27 +31,28 @@ function DebtHighlight() {
 
 export default function AIGovernanceDebtPage() {
   return (
-    <main className="min-h-screen bg-white py-14 text-slate-900 dark:bg-white dark:text-slate-100 sm:py-18">
+    <><Navbar />
+      <main className="min-h-screen bg-white py-14 text-slate-900 sm:py-18">
       <Container>
         <article className="mx-auto max-w-4xl">
-          <header className="mb-10 border-b border-slate-200 pb-9 dark:border-[#C0CAD6]">
-            <p className="mb-4 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-600">
+          <header className="mb-10 border-b border-slate-200 pb-9">
+            <p className="mb-4 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500">
               AI Governance · Responsible AI · AI Assurance
             </p>
-            <h1 className="max-w-4xl font-sans text-3xl font-bold leading-[1.1] tracking-[-0.025em] text-slate-950 dark:text-[#4E537D] sm:text-4xl lg:text-5xl">
-              <span className="underline decoration-amber-300 decoration-4 underline-offset-4 dark:decoration-amber-500/70">AI Governance Debt</span> — The Risk We Don&apos;t See
+            <h1 className="max-w-4xl font-sans text-3xl font-bold leading-[1.1] tracking-[-0.025em] text-slate-950 sm:text-4xl lg:text-5xl">
+              <span className="underline decoration-amber-300 decoration-4 underline-offset-4">AI Governance Debt</span> — The Risk We Don&apos;t See
             </h1>
-            <p className="mt-5 max-w-3xl font-serif text-base leading-7 text-slate-600 dark:text-slate-600 sm:text-lg sm:leading-8">
+            <p className="mt-5 max-w-3xl font-serif text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
               A practical way to think about the growing gap between AI adoption and the governance capability needed to manage it.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3 font-sans text-[11px] font-medium text-slate-500 dark:text-slate-600">
-              <span className="rounded-full bg-slate-100 px-3 py-1.5 dark:bg-[#EBEEF3]">Research &amp; Perspectives</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1.5 dark:bg-[#EBEEF3]">September 2026</span>
+            <div className="mt-6 flex flex-wrap gap-3 font-sans text-[11px] font-medium text-slate-500">
+              <span className="rounded-full bg-slate-100 px-3 py-1.5">Research &amp; Perspectives</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1.5">September 2026</span>
             </div>
           </header>
 
-          <div className="font-serif text-base leading-7 text-slate-700 dark:text-slate-600 sm:text-[17px] sm:leading-8">
-            <p className="mb-8 border-l-4 border-slate-900 pl-5 text-lg font-semibold leading-7 text-slate-950 dark:border-slate-200 dark:text-[#4E537D] sm:text-xl sm:leading-8">
+          <div className="font-serif text-base leading-7 text-slate-700 sm:text-[17px] sm:leading-8">
+            <p className="mb-8 border-l-4 border-slate-900 pl-5 text-lg font-semibold leading-7 text-slate-950 sm:text-xl sm:leading-8">
               Your organization may already have AI governance debt.
               <br />
               You just may not have a way to see it.
@@ -63,12 +66,12 @@ export default function AIGovernanceDebtPage() {
               AI portfolio requires and the governance capability in place.
             </p>
 
-            <section className="mb-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-[#C0CAD6] dark:bg-[#EBEEF3]/60 sm:p-7">
-              <h2 className="mb-4 font-sans text-xl font-bold tracking-tight text-slate-950 dark:text-[#4E537D] sm:text-2xl">
+            <section className="mb-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-7">
+              <h2 className="mb-4 font-sans text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
                 Where governance debt shows up
               </h2>
-              <p className="mb-4 text-sm text-slate-600 dark:text-slate-600">It can show up as:</p>
-              <ul className="list-disc space-y-2.5 pl-6 marker:text-slate-500 dark:marker:text-slate-600">
+              <p className="mb-4 text-sm text-slate-600">It can show up as:</p>
+              <ul className="list-disc space-y-2.5 pl-6 marker:text-slate-500">
                 {debtSignals.map((signal) => (
                   <li key={signal} className="pl-1.5">{signal}</li>
                 ))}
@@ -76,7 +79,7 @@ export default function AIGovernanceDebtPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="mb-4 font-sans text-xl font-bold tracking-tight text-slate-950 dark:text-[#4E537D] sm:text-2xl">
+              <h2 className="mb-4 font-sans text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
                 How the debt compounds
               </h2>
               <p className="mb-6">
@@ -85,8 +88,8 @@ export default function AIGovernanceDebtPage() {
                 it has 150 AI systems, multiple foundation models, AI agents and third-party AI services. But its governance
                 capability has barely changed.
               </p>
-              <div className="rounded-2xl border-l-4 border-slate-300 bg-slate-50 px-5 py-4 dark:border-slate-700 dark:bg-[#EBEEF3]/50">
-                <p className="mb-0 text-sm leading-6 text-slate-600 dark:text-slate-600 sm:text-base sm:leading-7">
+              <div className="rounded-2xl border-l-4 border-slate-300 bg-slate-50 px-5 py-4">
+                <p className="mb-0 text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
                   The organization may still have a Responsible AI policy. It may still conduct risk assessments. It may still
                   have an AI governance committee. Yet the gap between the scale of AI activity and the organization&apos;s ability
                   to govern that activity has widened.
@@ -98,7 +101,7 @@ export default function AIGovernanceDebtPage() {
             </section>
 
             <figure className="my-12">
-              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm dark:border-[#C0CAD6] dark:bg-[#EBEEF3]">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm">
                 <Image
                   src="/ai-governance-debt.svg"
                   alt="Conceptual model showing an AI portfolio growing from 10 to 150 systems while governance capability grows more slowly, creating a widening AI Governance Debt gap."
@@ -107,7 +110,7 @@ export default function AIGovernanceDebtPage() {
                   className="h-auto w-full rounded-xl"
                 />
               </div>
-              <figcaption className="mt-3 text-center font-sans text-xs leading-5 text-slate-500 dark:text-slate-600">
+              <figcaption className="mt-3 text-center font-sans text-xs leading-5 text-slate-500">
                 Conceptual model: as the AI portfolio scales faster than governance capability, the governance debt gap widens.
               </figcaption>
             </figure>
@@ -117,37 +120,37 @@ export default function AIGovernanceDebtPage() {
               respond to incidents and demonstrate that governance controls are working.
             </p>
 
-            <section className="mb-10 border-t border-slate-200 pt-9 dark:border-[#C0CAD6]">
-              <h2 className="mb-4 font-sans text-xl font-bold tracking-tight text-slate-950 dark:text-[#4E537D] sm:text-2xl">
+            <section className="mb-10 border-t border-slate-200 pt-9">
+              <h2 className="mb-4 font-sans text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">
                 Where frameworks help
               </h2>
               <p className="mb-6">
                 This is where frameworks such as the NIST AI Risk Management Framework become valuable. NIST structures AI risk
-                management around <strong className="font-sans font-bold text-slate-950 dark:text-[#4E537D]">GOVERN, MAP, MEASURE and MANAGE</strong>,
+                management around <strong className="font-sans font-bold text-slate-950">GOVERN, MAP, MEASURE and MANAGE</strong>,
                 with governance intended to be cross-cutting across the AI risk-management process.
               </p>
-              <p className="rounded-2xl bg-white px-5 py-5 font-sans text-sm font-medium leading-6 text-[#4E537D] dark:bg-white dark:text-slate-950 sm:px-7 sm:py-6 sm:text-base sm:leading-7">
+              <p className="rounded-2xl bg-white px-5 py-5 font-sans text-sm font-medium leading-6 text-[#4E537D] sm:px-7 sm:py-6 sm:text-base sm:leading-7">
                 But adopting a framework is not the same as building governance capability.
               </p>
             </section>
 
-            <section className="mb-12 border-b border-slate-200 pb-10 dark:border-[#C0CAD6]">
-              <p className="font-sans text-xl font-bold leading-8 tracking-tight text-slate-950 dark:text-[#4E537D] sm:text-2xl sm:leading-9">
+            <section className="mb-12 border-b border-slate-200 pb-10">
+              <p className="font-sans text-xl font-bold leading-8 tracking-tight text-slate-950 sm:text-2xl sm:leading-9">
                 Can AI Governance Debt be identified, measured and actively reduced?
               </p>
             </section>
 
             <section className="font-sans">
-              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-950 dark:text-[#4E537D] sm:text-2xl">Sources &amp; references</h2>
-              <ol className="space-y-2.5 pl-5 text-xs leading-6 text-slate-600 dark:text-slate-600 sm:text-sm">
-                <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950 dark:hover:text-[#4E537D]" href="https://airc.nist.gov/airmf-resources/playbook/" target="_blank" rel="noreferrer">NIST AI RMF Playbook</a></li>
-                <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950 dark:hover:text-[#4E537D]" href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" target="_blank" rel="noreferrer">NIST Generative AI Profile</a></li>
-                <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950 dark:hover:text-[#4E537D]" href="https://www.iso.org/standard/42001" target="_blank" rel="noreferrer">ISO/IEC 42001</a></li>
+              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-950 sm:text-2xl">Sources &amp; references</h2>
+              <ol className="space-y-2.5 pl-5 text-xs leading-6 text-slate-600 sm:text-sm">
+                <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950" href="https://airc.nist.gov/airmf-resources/playbook/" target="_blank" rel="noreferrer">NIST AI RMF Playbook</a></li>
+                <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950" href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" target="_blank" rel="noreferrer">NIST Generative AI Profile</a></li>
+                <li><a className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950" href="https://www.iso.org/standard/42001" target="_blank" rel="noreferrer">ISO/IEC 42001</a></li>
               </ol>
             </section>
 
-            <aside className="mt-8 rounded-xl bg-slate-50 p-4 font-sans text-xs leading-6 text-slate-600 dark:bg-[#EBEEF3]/70 dark:text-slate-600">
-              <strong className="text-slate-900 dark:text-slate-200">Author note:</strong> The term “AI Governance Debt” is used here as a proposed conceptual
+            <aside className="mt-8 rounded-xl bg-slate-50 p-4 font-sans text-xs leading-6 text-slate-600">
+              <strong className="text-slate-900">Author note:</strong> The term “AI Governance Debt” is used here as a proposed conceptual
               construct for personal research. It is not presented as an official NIST or ISO term.
             </aside>
           </div>
@@ -155,5 +158,8 @@ export default function AIGovernanceDebtPage() {
       </Container>
     <PageNavigation current="/blog" />
       </main>
+  );
+      <Footer />
+    </>
   );
 }
