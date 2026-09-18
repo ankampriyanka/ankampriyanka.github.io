@@ -1,9 +1,18 @@
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Container from "@/components/layout/Container";
+import PageNavigation from "@/components/layout/PageNavigation";
 import ContactCTA from "@/components/sections/ContactCTA";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-950">
-      <ContactCTA />
-    </main>
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-white">
+        <ContactCTA />
+        <Container><PageNavigation current="/contact" /></Container>
+      </main>
+      <Footer />
+    </>
   );
 }
