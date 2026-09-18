@@ -219,7 +219,6 @@ export default function UnderstandingAIBOMPage() {
       </Container>
     <PageNavigation current="/blog" />
       </main>
-  );
       <Footer />
     </>
   );
