@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/data/site";
 import { ROUTES } from "@/constants/routes";
@@ -29,9 +30,16 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center">
-            <div className="relative h-72 w-64 overflow-hidden rounded-[2rem] border-8 border-[#EBEEF3] bg-[#A7E4E9] shadow-lg">
-              <div className="flex h-full items-center justify-center bg-white px-6 text-center">
-                <span className="text-7xl font-bold tracking-tight text-[#4E537D]">AP</span>
+            <div className="relative h-80 w-72 overflow-hidden rounded-[2rem] border border-[#C0CAD6] bg-[#EBEEF3] p-2 shadow-[0_20px_45px_rgba(78,83,125,0.16)]">
+              <div className="relative h-full w-full overflow-hidden rounded-[1.5rem] bg-white">
+                <Image
+                  src="/profile.jpg"
+                  alt="Ankam Priyanka"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 288px, 320px"
+                  className="object-cover object-top"
+                />
               </div>
             </div>
           </div>
