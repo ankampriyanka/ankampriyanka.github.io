@@ -210,7 +210,6 @@ export default function AIGovernanceDebtComparisonPage() {
       </Container>
     <PageNavigation current="/blog" />
       </main>
-  );
       <Footer />
     </>
   );
