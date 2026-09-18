@@ -72,7 +72,7 @@ function ArticleCard({
   return (
     <article className="group flex h-full flex-col rounded-2xl border border-[#C0CAD6] bg-[#EBEEF3] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-xl">
       <div className="flex flex-wrap items-center gap-3">
-        <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300">
+        <span className="rounded-full border border-[#A7E4E9] bg-[#A7E4E9]/50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#4E537D]">
           {article.category}
         </span>
         {article.part && (
@@ -81,7 +81,7 @@ function ArticleCard({
       </div>
 
       <h3 className="mt-5 text-2xl font-bold leading-tight tracking-tight text-[#4E537D]">
-        <Link href={article.href} className="transition group-hover:text-cyan-200">
+        <Link href={article.href} className="transition group-hover:text-[#4E537D]">
           {article.title}
         </Link>
       </h3>
@@ -96,7 +96,7 @@ function ArticleCard({
         </span>
         <Link
           href={article.href}
-          className="font-semibold text-cyan-300 transition hover:text-cyan-200"
+          className="font-semibold text-[#4E537D] transition hover:text-[#4E537D]"
         >
           Read article →
         </Link>
@@ -111,7 +111,7 @@ export default function BlogPage() {
       <main className="min-h-screen bg-white py-24 text-[#4E537D]">
       <Container>
         <header className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#4E537D]">
             Research & Perspectives
           </p>
           <h1 className="mt-5 text-5xl font-bold tracking-tight sm:text-6xl">
@@ -129,17 +129,18 @@ export default function BlogPage() {
             <span className="h-px w-8 bg-cyan-400" />
             <h2
               id="featured-research"
-              className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300"
+              className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4E537D]"
             >
               Featured Research
             </h2>
           </div>
 
-          <article className="relative overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 p-8 shadow-2xl sm:p-10">
-            <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl" />
-            <div className="relative max-w-4xl">
+          <article className="relative overflow-hidden rounded-3xl border border-[#C0CAD6] bg-[#EBEEF3] p-8 shadow-[0_18px_45px_rgba(78,83,125,0.12)] sm:p-10">
+            <div className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-[#A7E4E9]/50 blur-3xl" />
+            <div className="relative grid gap-8 lg:grid-cols-[1fr_220px] lg:items-center">
+              <div>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300">
+                <span className="rounded-full border border-[#A7E4E9] bg-[#A7E4E9]/50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#4E537D]">
                   {featured.category}
                 </span>
                 <span className="text-sm text-slate-500">
@@ -150,7 +151,7 @@ export default function BlogPage() {
               <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
                 <Link
                   href={featured.href}
-                  className="transition hover:text-cyan-200"
+                  className="transition hover:text-[#4E537D]"
                 >
                   {featured.title}
                 </Link>
@@ -163,13 +164,25 @@ export default function BlogPage() {
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 <Link
                   href={featured.href}
-                  className="inline-flex items-center rounded-xl bg-cyan-300 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
+                  className="inline-flex items-center rounded-xl bg-[#4E537D] px-5 py-3 font-semibold text-white transition hover:bg-[#3f4468]"
                 >
                   Explore article <span className="ml-2">→</span>
                 </Link>
                 <span className="text-sm text-slate-500">
                   {featured.series} · {featured.part}
                 </span>
+              </div>
+              <div className="mx-auto w-full max-w-[220px]">
+                <div className="rounded-[1.75rem] border border-[#C0CAD6] bg-white p-2 shadow-lg">
+                  <img
+                    src="https://github.com/ankampriyanka.png"
+                    alt="Ankam Priyanka"
+                    className="aspect-[4/5] w-full rounded-[1.35rem] object-cover"
+                  />
+                </div>
+                <p className="mt-3 text-center text-xs font-medium uppercase tracking-[0.16em] text-[#4E537D]">
+                  AI Governance · Responsible AI
+                </p>
               </div>
             </div>
           </article>
@@ -178,7 +191,7 @@ export default function BlogPage() {
         <section className="mt-20" aria-labelledby="latest-research">
           <div className="mb-7 flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4E537D]">
                 Latest Research
               </p>
               <h2 id="latest-research" className="mt-2 text-3xl font-bold">
@@ -198,7 +211,7 @@ export default function BlogPage() {
           className="mt-16 rounded-2xl border border-[#C0CAD6] bg-[#EBEEF3]/60 p-7"
           aria-labelledby="research-series"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4E537D]">
             Research Series
           </p>
           <h2 id="research-series" className="mt-2 text-2xl font-bold">
