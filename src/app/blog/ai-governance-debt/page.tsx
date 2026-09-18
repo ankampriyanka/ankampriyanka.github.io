@@ -158,7 +158,6 @@ export default function AIGovernanceDebtPage() {
       </Container>
     <PageNavigation current="/blog" />
       </main>
-  );
       <Footer />
     </>
   );
