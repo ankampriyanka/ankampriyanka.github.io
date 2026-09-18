@@ -7,22 +7,16 @@ export default function FeaturedProjects() {
   const featuredProjects = getFeaturedProjects();
 
   return (
-    <section
-      id="projects"
-      className="bg-white pt-0 pb-20 dark:bg-slate-950"
-    >
+    <section id="projects" className="bg-slate-950 py-24">
       <Container>
         <SectionHeading
-          title="Featured Projects"
-          subtitle="A selection of projects focused on Responsible AI, AI Safety, governance, and technical innovation."
+          title="Selected Projects"
+          subtitle="Applied systems and research prototypes focused on Responsible AI, AI Safety, governance and technical innovation."
         />
 
-        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-            />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </Container>
