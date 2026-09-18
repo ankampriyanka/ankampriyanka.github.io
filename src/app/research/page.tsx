@@ -1,6 +1,7 @@
 import Container from "@/components/layout/Container";
 import ResearchCard from "@/components/research/ResearchCard";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PageNavigation from "@/components/layout/PageNavigation";
 import { research } from "@/data/research";
 
 export default function ResearchPage() {
@@ -20,6 +21,7 @@ export default function ResearchPage() {
             />
           ))}
         </div>
+        <PageNavigation current="/research" />
       </Container>
     </main>
   );
