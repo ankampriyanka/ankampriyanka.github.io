@@ -13,15 +13,14 @@ export default function Button({
   variant = "primary",
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center rounded-xl px-6 py-3 font-medium transition-colors";
+    "inline-flex items-center rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950";
 
-const variants = {
-  primary:
-    "bg-slate-900 text-white hover:bg-slate-700 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200",
-
-  secondary:
-    "border border-slate-300 bg-white text-slate-900 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800",
-};
+  const variants = {
+    primary:
+      "bg-cyan-400 text-slate-950 hover:bg-cyan-300 hover:-translate-y-0.5",
+    secondary:
+      "border border-slate-700 bg-slate-900 text-slate-100 hover:border-cyan-400/60 hover:bg-slate-800 hover:-translate-y-0.5",
+  };
 
   const className = `${baseClasses} ${variants[variant]}`;
 
