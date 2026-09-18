@@ -1,5 +1,6 @@
 import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PageNavigation from "@/components/layout/PageNavigation";
 
 export default function AboutPage() {
   return (
@@ -28,6 +29,7 @@ export default function AboutPage() {
             Monitoring Systems.
           </p>
         </div>
+        <PageNavigation current="/about" />
       </Container>
     </main>
   );
