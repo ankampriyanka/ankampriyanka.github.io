@@ -5,22 +5,11 @@ import { experiences } from "@/data/experienceTimeline";
 
 export default function ExperienceTimeline() {
   return (
-    <section
-    id="experience"
-    className="py-24 bg-slate-50">
+    <section id="experience" className="bg-white py-20">
       <Container>
-        <SectionHeading
-          title="Professional Journey"
-          subtitle="A snapshot of my career in engineering, program management, and Responsible AI."
-        />
-
-        <div className="mt-12">
-          {experiences.map((experience) => (
-            <TimelineItem
-              key={experience.id}
-              experience={experience}
-            />
-          ))}
+        <SectionHeading title="Professional Journey" subtitle="14+ years across engineering, program management, product operations and Responsible AI." />
+        <div className="mt-10">
+          {experiences.map((experience) => <TimelineItem key={experience.id} experience={experience} />)}
         </div>
       </Container>
     </section>
