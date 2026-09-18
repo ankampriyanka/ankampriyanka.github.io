@@ -4,6 +4,14 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const articles = [
   {
+    title: "Understanding AI Bill of Materials (AIBOM)",
+    description:
+      "Part 1: why AI supply-chain visibility needs to extend beyond software components to models, datasets, agents, guardrails, runtime and evidence.",
+    category: "AI Governance · AIBOM · Part 1",
+    href: "/blog/understanding-ai-bom",
+    date: "September 2026",
+  },
+  {
     title: "NIST AI Risk Management Framework: GOVERN, MAP, MEASURE & MANAGE",
     description:
       "A practical perspective on turning the NIST AI RMF into a continuous AI risk management capability across governance, context, evidence and decisions.",
