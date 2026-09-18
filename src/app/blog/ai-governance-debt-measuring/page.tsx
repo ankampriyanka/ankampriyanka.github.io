@@ -261,7 +261,6 @@ export default function MeasureAIGovernanceDebtPage() {
       </Container>
     <PageNavigation current="/blog" />
       </main>
-  );
       <Footer />
     </>
   );
