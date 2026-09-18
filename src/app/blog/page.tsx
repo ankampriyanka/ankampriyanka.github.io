@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import PageNavigation from "@/components/layout/PageNavigation";
@@ -105,7 +107,8 @@ function ArticleCard({
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-white py-24 text-[#4E537D]">
+    <><Navbar />
+      <main className="min-h-screen bg-white py-24 text-[#4E537D]">
       <Container>
         <header className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
@@ -225,5 +228,6 @@ export default function BlogPage() {
         <PageNavigation current="/blog" />
       </Container>
     </main>
+      <Footer /></>
   );
 }
