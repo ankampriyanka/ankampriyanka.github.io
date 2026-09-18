@@ -1,17 +1,20 @@
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PageNavigation from "@/components/layout/PageNavigation";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-slate-950 dark:text-white">
+    <><Navbar />
+      <main className="min-h-screen bg-white py-24 text-slate-900">
       <Container>
         <SectionHeading
           title="About Me"
           subtitle="Program Management, Responsible AI, AI Safety and Automotive AI."
         />
 
-        <div className="mt-12 max-w-4xl space-y-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+        <div className="mt-12 max-w-4xl space-y-6 text-lg leading-8 text-slate-600">
           <p>
             I am a Program Management and Product Operations professional
             with 14+ years of experience spanning engineering, program
@@ -32,5 +35,8 @@ export default function AboutPage() {
         <PageNavigation current="/about" />
       </Container>
     </main>
+  );
+      <Footer />
+    </>
   );
 }
