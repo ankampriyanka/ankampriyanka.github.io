@@ -1,12 +1,16 @@
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 import Container from "@/components/layout/Container";
 import ProjectCard from "@/components/project/ProjectCard";
 import AcademicPortfolio from "@/components/portfolio/AcademicPortfolio";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PageNavigation from "@/components/layout/PageNavigation";
 import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-slate-950 dark:text-white">
+    <><Navbar />
+      <main className="min-h-screen bg-white py-24 text-slate-900 dark:bg-white dark:text-[#4E537D]">
       <Container>
         <SectionHeading
           title="Projects"
@@ -27,5 +31,6 @@ export default function ProjectsPage() {
         <AcademicPortfolio />
       </Container>
     </main>
+      <Footer /></>
   );
 }
