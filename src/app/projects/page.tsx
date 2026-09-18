@@ -10,6 +10,7 @@ import { projects } from "@/data/projects";
 export default function ProjectsPage() {
   return (
     <><Navbar />
+      <><Navbar />
       <main className="min-h-screen bg-white py-24 text-slate-900">
       <Container>
         <SectionHeading
@@ -29,6 +30,7 @@ export default function ProjectsPage() {
         </section>
 
         <AcademicPortfolio />
+        <PageNavigation current="/projects" />
       </Container>
     </main>
       <Footer /></>
