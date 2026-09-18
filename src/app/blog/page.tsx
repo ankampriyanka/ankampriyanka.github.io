@@ -172,6 +172,7 @@ export default function BlogPage() {
                   {featured.series} · {featured.part}
                 </span>
               </div>
+              </div>
               <div className="mx-auto w-full max-w-[220px]">
                 <div className="rounded-[1.75rem] border border-[#C0CAD6] bg-white p-2 shadow-lg">
                   <img
