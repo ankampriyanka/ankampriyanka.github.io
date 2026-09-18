@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/data/site";
 import { ROUTES } from "@/constants/routes";
@@ -31,8 +30,8 @@ export default function Hero() {
 
           <div className="flex justify-center">
             <div className="relative h-72 w-64 overflow-hidden rounded-[2rem] border-8 border-[#EBEEF3] bg-[#A7E4E9] shadow-lg">
-              <div className="flex h-full items-center justify-center px-6 text-center text-sm font-medium text-[#4E537D]">
-                Photo
+              <div className="flex h-full items-center justify-center bg-white px-6 text-center">
+                <span className="text-7xl font-bold tracking-tight text-[#4E537D]">AP</span>
               </div>
             </div>
           </div>
