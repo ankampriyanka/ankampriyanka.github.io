@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
+import PageNavigation from "@/components/layout/PageNavigation";
 
 const articles = [
   {
@@ -67,7 +68,7 @@ function ArticleCard({
   article: (typeof articles)[number];
 }) {
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-xl">
+    <article className="group flex h-full flex-col rounded-2xl border border-[#C0CAD6] bg-[#EBEEF3] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-xl">
       <div className="flex flex-wrap items-center gap-3">
         <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300">
           {article.category}
@@ -77,17 +78,17 @@ function ArticleCard({
         )}
       </div>
 
-      <h3 className="mt-5 text-2xl font-bold leading-tight tracking-tight text-white">
+      <h3 className="mt-5 text-2xl font-bold leading-tight tracking-tight text-[#4E537D]">
         <Link href={article.href} className="transition group-hover:text-cyan-200">
           {article.title}
         </Link>
       </h3>
 
-      <p className="mt-4 flex-1 text-base leading-7 text-slate-300">
+      <p className="mt-4 flex-1 text-base leading-7 text-slate-600">
         {article.description}
       </p>
 
-      <div className="mt-7 flex items-center justify-between border-t border-slate-800 pt-5 text-sm">
+      <div className="mt-7 flex items-center justify-between border-t border-[#C0CAD6] pt-5 text-sm">
         <span className="text-slate-500">
           {article.date} · {article.readTime}
         </span>
@@ -104,7 +105,7 @@ function ArticleCard({
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-slate-950 py-24 text-white">
+    <main className="min-h-screen bg-white py-24 text-[#4E537D]">
       <Container>
         <header className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
@@ -113,7 +114,7 @@ export default function BlogPage() {
           <h1 className="mt-5 text-5xl font-bold tracking-tight sm:text-6xl">
             AI Governance, Responsible AI & AI Assurance
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             Independent research, frameworks and practical explorations focused
             on translating AI governance principles into measurable, actionable
             and continuously improvable practices.
@@ -152,7 +153,7 @@ export default function BlogPage() {
                 </Link>
               </h2>
 
-              <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
                 {featured.description}
               </p>
 
@@ -191,7 +192,7 @@ export default function BlogPage() {
         </section>
 
         <section
-          className="mt-16 rounded-2xl border border-slate-800 bg-slate-900/60 p-7"
+          className="mt-16 rounded-2xl border border-[#C0CAD6] bg-[#EBEEF3]/60 p-7"
           aria-labelledby="research-series"
         >
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">
@@ -202,9 +203,9 @@ export default function BlogPage() {
           </h2>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-slate-800 bg-slate-950 p-5">
-              <p className="font-semibold text-white">AI Governance Debt</p>
-              <div className="mt-3 flex flex-wrap gap-2 text-sm text-slate-400">
+            <div className="rounded-xl border border-[#C0CAD6] bg-white p-5">
+              <p className="font-semibold text-[#4E537D]">AI Governance Debt</p>
+              <div className="mt-3 flex flex-wrap gap-2 text-sm text-slate-600">
                 <span>Part 1</span>
                 <span>→</span>
                 <span>Part 2</span>
@@ -213,14 +214,15 @@ export default function BlogPage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-slate-800 bg-slate-950 p-5">
-              <p className="font-semibold text-white">AIBOM</p>
-              <div className="mt-3 text-sm text-slate-400">
+            <div className="rounded-xl border border-[#C0CAD6] bg-white p-5">
+              <p className="font-semibold text-[#4E537D]">AIBOM</p>
+              <div className="mt-3 text-sm text-slate-600">
                 Part 1 · Understanding AI Bill of Materials
               </div>
             </div>
           </div>
         </section>
+        <PageNavigation current="/blog" />
       </Container>
     </main>
   );
