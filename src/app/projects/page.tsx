@@ -8,30 +8,9 @@ import PageNavigation from "@/components/layout/PageNavigation";
 import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
-  return (
-    <><Navbar />
-      <main className="min-h-screen bg-white py-24 text-slate-900">
-      <Container>
-        <SectionHeading
-          title="Projects"
-          subtitle="Selected professional projects, followed by academic AI/ML work and doctoral research."
-        />
-
-        <section aria-labelledby="selected-projects">
-          <h2 id="selected-projects" className="mb-8 text-3xl font-bold">
-            Selected Projects
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </section>
-
-        <AcademicPortfolio />
-        <PageNavigation current="/projects" />
-      </Container>
-    </main>
-      <Footer /></>
-  );
+  return (<><Navbar /><main className="min-h-screen bg-[#050505] py-24 text-[#F5F1EA]"><Container>
+    <SectionHeading title="Projects" subtitle="Selected professional projects, followed by academic AI/ML work and doctoral research." />
+    <section aria-labelledby="selected-projects"><h2 id="selected-projects" className="mb-8 text-3xl font-bold text-[#F5F1EA]">Selected Projects</h2><div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">{projects.map((project)=><ProjectCard key={project.id} project={project}/>)}</div></section>
+    <AcademicPortfolio /><PageNavigation current="/projects" />
+  </Container></main><Footer /></>);
 }
