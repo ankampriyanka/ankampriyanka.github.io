@@ -147,54 +147,54 @@ export default async function ResearchDetailPage({ params }: { params: Promise<{
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white py-16 text-slate-900 sm:py-20">
+      <main className="min-h-screen bg-[#111111] py-16 text-[#F5F1EA] sm:py-20">
         <Container>
           <article className="mx-auto max-w-5xl">
-            <header className="border-b border-[#C0CAD6] pb-10">
-              <Link href="/research" className="text-sm font-semibold text-[#4E537D] hover:underline">
+            <header className="border-b border-[#2A2A2A] pb-10">
+              <Link href="/research" className="text-sm font-semibold text-[#F5F1EA] hover:underline">
                 ← Research portfolio
               </Link>
-              <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-[#4E537D]">{research.eyebrow}</p>
-              <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-[#4E537D] sm:text-5xl">
+              <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-[#F5F1EA]">{research.eyebrow}</p>
+              <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-[#F5F1EA] sm:text-5xl">
                 {research.title}
               </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">{research.intro}</p>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#A9A39A]">{research.intro}</p>
             </header>
 
-            <section className="mt-10 overflow-hidden rounded-3xl border border-[#C0CAD6] bg-[#EBEEF3] p-6 sm:p-8">
+            <section className="mt-10 overflow-hidden rounded-3xl border border-[#2A2A2A] bg-[#111111] p-6 sm:p-8">
               {research.visual === "dms" && (
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Trust assessment lens</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5F1EA]">Trust assessment lens</p>
                   <div className="mt-6 grid gap-3 sm:grid-cols-3">
                     {["Observe", "Evaluate", "Score"].map((step, i) => (
-                      <div key={step} className={`rounded-2xl p-5 ${i === 0 ? "bg-[#A7E4E9]" : i === 1 ? "bg-white border border-[#C0CAD6]" : "bg-[#4E537D] text-white"}`}>
+                      <div key={step} className={`rounded-2xl p-5 ${i === 0 ? "bg-[#F39A3F]" : i === 1 ? "bg-[#111111] border border-[#2A2A2A]" : "bg-[#F39A3F] text-[#050505]"}`}>
                         <span className="text-xs font-bold uppercase tracking-wider">{String(i + 1).padStart(2, "0")}</span>
                         <p className="mt-2 text-lg font-bold">{step}</p>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 rounded-2xl bg-white p-5 text-center font-semibold text-[#4E537D]">Evidence → Trust Dimensions → AI Trust Score</div>
+                  <div className="mt-4 rounded-2xl bg-[#111111] p-5 text-center font-semibold text-[#F5F1EA]">Evidence → Trust Dimensions → AI Trust Score</div>
                 </div>
               )}
               {research.visual === "semantic" && (
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Semantic risk field</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5F1EA]">Semantic risk field</p>
                   <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
                     {["Risk signal", "Context", "Embedding", "Similarity", "Classification"].map((item, i) => (
-                      <div key={item} className={`rounded-full border px-5 py-3 text-sm font-semibold ${i === 2 ? "border-[#4E537D] bg-[#4E537D] text-white" : "border-[#C0CAD6] bg-white text-[#4E537D]"}`}>
+                      <div key={item} className={`rounded-full border px-5 py-3 text-sm font-semibold ${i === 2 ? "border-[#4E537D] bg-[#F39A3F] text-[#050505]" : "border-[#2A2A2A] bg-[#111111] text-[#F5F1EA]"}`}>
                         {item}
                       </div>
                     ))}
                   </div>
-                  <p className="mt-6 text-center text-sm text-slate-600">Risk language → semantic representation → contextual classification</p>
+                  <p className="mt-6 text-center text-sm text-[#A9A39A]">Risk language → semantic representation → contextual classification</p>
                 </div>
               )}
               {research.visual === "lifecycle" && (
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Governance across the AI lifecycle</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5F1EA]">Governance across the AI lifecycle</p>
                   <div className="mt-6 grid gap-2 sm:grid-cols-4">
                     {["Concept", "Data", "Development", "Validation", "Deployment", "Monitoring", "Evidence", "Decision"].map((item, i) => (
-                      <div key={item} className={`rounded-xl border p-4 text-center text-sm font-semibold ${i % 2 === 0 ? "border-[#AEB3D0] bg-white" : "border-[#A7E4E9] bg-[#F2FBFC]"} text-[#4E537D]`}>
+                      <div key={item} className={`rounded-xl border p-4 text-center text-sm font-semibold ${i % 2 === 0 ? "border-[#3A3A3A] bg-[#111111]" : "border-[#F39A3F]/40 bg-[#18120F]"} text-[#F5F1EA]`}>
                         {item}
                       </div>
                     ))}
@@ -203,15 +203,15 @@ export default async function ResearchDetailPage({ params }: { params: Promise<{
               )}
               {research.visual === "taxonomy" && (
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Relationship-first knowledge layer</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5F1EA]">Relationship-first knowledge layer</p>
                   <div className="mt-6 grid gap-3 sm:grid-cols-3">
                     {["Trust Dimension", "Lifecycle Stage", "Scenario", "Metric", "Control", "Evidence"].map((item, i) => (
-                      <div key={item} className="rounded-xl border border-[#C0CAD6] bg-white p-4 text-center text-sm font-semibold text-[#4E537D]">
+                      <div key={item} className="rounded-xl border border-[#2A2A2A] bg-[#111111] p-4 text-center text-sm font-semibold text-[#F5F1EA]">
                         Risk → {item}
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 rounded-xl bg-[#4E537D] p-4 text-center text-sm font-semibold text-white">External Framework Mapping</div>
+                  <div className="mt-4 rounded-xl bg-[#F39A3F] p-4 text-center text-sm font-semibold text-[#050505]">External Framework Mapping</div>
                 </div>
               )}
             </section>
@@ -220,10 +220,10 @@ export default async function ResearchDetailPage({ params }: { params: Promise<{
               {research.metrics.map((metric, index) => (
                 <div
                   key={metric}
-                  className={`rounded-2xl border p-5 ${index % 3 === 0 ? "border-[#A7E4E9] bg-[#F2FBFC]" : index % 3 === 1 ? "border-[#C0CAD6] bg-[#F3F5F8]" : "border-[#AEB3D0] bg-[#F1F1F7]"}`}
+                  className={`rounded-2xl border p-5 ${index % 3 === 0 ? "border-[#F39A3F]/40 bg-[#18120F]" : index % 3 === 1 ? "border-[#2A2A2A] bg-[#F3F5F8]" : "border-[#3A3A3A] bg-[#181818]"}`}
                 >
-                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#4E537D]">Research lens</span>
-                  <p className="mt-2 font-semibold text-[#4E537D]">{metric}</p>
+                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#F5F1EA]">Research lens</span>
+                  <p className="mt-2 font-semibold text-[#F5F1EA]">{metric}</p>
                 </div>
               ))}
             </section>
@@ -231,27 +231,27 @@ export default async function ResearchDetailPage({ params }: { params: Promise<{
             <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_280px]">
               <div className="space-y-6">
                 {research.sections.map((section, index) => (
-                  <section key={section.title} className="rounded-2xl border border-[#C0CAD6] bg-white p-7 shadow-sm">
+                  <section key={section.title} className="rounded-2xl border border-[#2A2A2A] bg-[#111111] p-7 shadow-sm">
                     <div className="flex gap-4">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EBEEF3] text-xs font-bold text-[#4E537D]">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#111111] text-xs font-bold text-[#F5F1EA]">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h2 className="text-xl font-bold text-[#4E537D]">{section.title}</h2>
-                        <p className="mt-3 leading-7 text-slate-600">{section.body}</p>
+                        <h2 className="text-xl font-bold text-[#F5F1EA]">{section.title}</h2>
+                        <p className="mt-3 leading-7 text-[#A9A39A]">{section.body}</p>
                       </div>
                     </div>
                   </section>
                 ))}
               </div>
 
-              <aside className="h-fit rounded-2xl border border-[#C0CAD6] bg-[#EBEEF3] p-6 lg:sticky lg:top-24">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Research artifact</p>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
+              <aside className="h-fit rounded-2xl border border-[#2A2A2A] bg-[#111111] p-6 lg:sticky lg:top-24">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5F1EA]">Research artifact</p>
+                <p className="mt-3 text-sm leading-6 text-[#A9A39A]">
                   This page summarizes the research direction. Detailed notebooks, evidence and implementation artifacts should remain linked to their respective repositories and research outputs.
                 </p>
                 {"github" in research && research.github ? (
-                  <a href={research.github} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[#4E537D] px-4 py-3 text-sm font-semibold text-white hover:bg-[#3f4468]">
+                  <a href={research.github} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[#F39A3F] px-4 py-3 text-sm font-semibold text-[#050505] hover:bg-[#F6B65B]">
                     Open GitHub repository ↗
                   </a>
                 ) : null}
