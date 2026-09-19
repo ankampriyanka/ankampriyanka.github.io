@@ -8,53 +8,10 @@ import { education } from "@/data/education";
 import { certifications } from "@/data/certification";
 import { skills } from "@/data/skills";
 
-export default function ResumePage() {
-  return (
-    <>
-      <Navbar />
-      <main className="bg-white">
-        <section className="border-b border-[#C0CAD6] bg-[#EBEEF3] py-16">
-          <Container>
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#4E537D]">{profile.title}</p>
-            <h1 className="mt-3 text-4xl font-bold text-[#4E537D] md:text-5xl">Resume</h1>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">{profile.description}</p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a href="/resume.pdf" target="_blank" rel="noreferrer" className="inline-flex rounded-xl bg-[#4E537D] px-5 py-3 text-sm font-semibold text-white hover:bg-[#424769]">View Resume ↗</a>
-              <a href="/resume.pdf?download=1" className="inline-flex rounded-xl border border-[#C0CAD6] bg-white px-5 py-3 text-sm font-semibold text-[#4E537D] hover:bg-[#EBEEF3]">Download PDF ↓</a>
-            </div>
-          </Container>
-        </section>
-
-        <section className="py-16"><Container>
-          <h2 className="mb-10 text-3xl font-bold text-[#4E537D]">Professional Experience</h2>
-          {experiences.map((experience) => (
-            <div key={experience.id} className="mb-8 rounded-2xl border border-[#C0CAD6] bg-white p-7 shadow-sm">
-              <h3 className="text-2xl font-bold text-[#4E537D]">{experience.role}</h3>
-              <p className="mt-2 font-semibold text-[#4E537D]">{experience.company}</p>
-              <p className="mb-5 text-sm text-slate-500">{experience.duration} • {experience.location}</p>
-              <p className="leading-8 text-slate-600">{experience.description}</p>
-              <ul className="mt-5 list-disc space-y-3 pl-6 text-slate-700">{experience.achievements.map((item) => <li key={item}>{item}</li>)}</ul>
-            </div>
-          ))}
-        </Container></section>
-
-        <section className="bg-[#EBEEF3] py-16"><Container>
-          <h2 className="mb-10 text-3xl font-bold text-[#4E537D]">Education</h2>
-          <div className="grid gap-6">{education.map((item) => <div key={item.id} className="rounded-2xl border border-[#C0CAD6] bg-white p-6"><h3 className="text-xl font-semibold text-[#4E537D]">{item.degree}</h3><p className="mt-2 text-[#4E537D]">{item.specialization}</p><p className="mt-2 text-slate-700">{item.institution}</p><p className="text-sm text-slate-500">{item.duration}</p></div>)}</div>
-        </Container></section>
-
-        <section className="py-16"><Container>
-          <h2 className="mb-10 text-3xl font-bold text-[#4E537D]">Certifications &amp; Standards</h2>
-          <div className="grid gap-6 md:grid-cols-2">{certifications.map((cert) => <div key={cert.id} className="rounded-2xl border border-[#C0CAD6] bg-white p-6 shadow-sm"><h3 className="font-semibold text-[#4E537D]">{cert.name}</h3><p className="mt-2 text-slate-500">{cert.issuer}</p><p className="mt-2 text-sm text-slate-700">{cert.year}</p></div>)}</div>
-        </Container></section>
-
-        <section className="bg-[#EBEEF3] py-16"><Container>
-          <h2 className="mb-10 text-3xl font-bold text-[#4E537D]">Core Skills</h2>
-          <div className="grid gap-6 md:grid-cols-2">{skills.map((skill) => <div key={skill.id} className="rounded-2xl border border-[#C0CAD6] bg-white p-6"><h3 className="mb-4 text-xl font-semibold text-[#4E537D]">{skill.category}</h3><div className="flex flex-wrap gap-3">{skill.skills.map((item) => <span key={item} className="rounded-full bg-[#A7E4E9] px-3 py-2 text-sm text-[#4E537D]">{item}</span>)}</div></div>)}</div>
-        </Container></section>
-        <PageNavigation current="/resume" />
-      </main>
-      <Footer />
-    </>
-  );
-}
+const card="rounded-2xl border border-[#2A2A2A] bg-[#111111] p-7 shadow-sm";
+export default function ResumePage(){return(<><Navbar/><main className="bg-[#050505] text-[#F5F1EA]">
+<section className="border-b border-[#2A2A2A] bg-[#111111] py-16"><Container><p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#F39A3F]">{profile.title}</p><h1 className="mt-3 text-4xl font-bold md:text-5xl">Resume</h1><p className="mt-5 max-w-3xl text-lg leading-8 text-[#A9A39A]">{profile.description}</p><div className="mt-7 flex flex-wrap gap-3"><a href="/resume.pdf" target="_blank" rel="noreferrer" className="inline-flex rounded-xl bg-[#F39A3F] px-5 py-3 text-sm font-semibold text-[#050505]">View Resume ↗</a><a href="/resume.pdf?download=1" className="inline-flex rounded-xl border border-[#3A3A3A] bg-[#181818] px-5 py-3 text-sm font-semibold text-[#F5F1EA] hover:border-[#F39A3F]">Download PDF ↓</a></div></Container></section>
+<section className="py-16"><Container><h2 className="mb-10 text-3xl font-bold">Professional Experience</h2>{experiences.map(e=><div key={e.id} className={`${card} mb-8`}><h3 className="text-2xl font-bold">{e.role}</h3><p className="mt-2 font-semibold text-[#F39A3F]">{e.company}</p><p className="mb-5 text-sm text-[#77736D]">{e.duration} • {e.location}</p><p className="leading-8 text-[#A9A39A]">{e.description}</p><ul className="mt-5 list-disc space-y-3 pl-6 text-[#A9A39A]">{e.achievements.map(item=><li key={item}>{item}</li>)}</ul></div>)}</Container></section>
+<section className="bg-[#0B0B0B] py-16"><Container><h2 className="mb-10 text-3xl font-bold">Education</h2><div className="grid gap-6">{education.map(i=><div key={i.id} className={card}><h3 className="text-xl font-semibold">{i.degree}</h3><p className="mt-2 text-[#F39A3F]">{i.specialization}</p><p className="mt-2 text-[#A9A39A]">{i.institution}</p><p className="text-sm text-[#77736D]">{i.duration}</p></div>)}</div></Container></section>
+<section className="py-16"><Container><h2 className="mb-10 text-3xl font-bold">Certifications &amp; Standards</h2><div className="grid gap-6 md:grid-cols-2">{certifications.map(c=><div key={c.id} className={card}><h3 className="font-semibold">{c.name}</h3><p className="mt-2 text-[#77736D]">{c.issuer}</p><p className="mt-2 text-sm text-[#A9A39A]">{c.year}</p></div>)}</div></Container></section>
+<section className="bg-[#0B0B0B] py-16"><Container><h2 className="mb-10 text-3xl font-bold">Core Skills</h2><div className="grid gap-6 md:grid-cols-2">{skills.map(s=><div key={s.id} className={card}><h3 className="mb-4 text-xl font-semibold">{s.category}</h3><div className="flex flex-wrap gap-3">{s.skills.map(item=><span key={item} className="rounded-full border border-[#3A3A3A] bg-[#181818] px-3 py-2 text-sm text-[#F6B65B]">{item}</span>)}</div></div>)}</div></Container></section><Container><PageNavigation current="/resume"/></Container></main><Footer/></>)}
