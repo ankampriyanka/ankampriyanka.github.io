@@ -1,6 +1,8 @@
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Link from "next/link";
+import Image from "next/image";
+import profilePhoto from "@/assests/pdf/LN picture.jpg";
 import Container from "@/components/layout/Container";
 import PageNavigation from "@/components/layout/PageNavigation";
 
@@ -175,9 +177,11 @@ export default function BlogPage() {
               </div>
               <div className="mx-auto w-full max-w-[220px]">
                 <div className="rounded-[1.75rem] border border-[#C0CAD6] bg-white p-2 shadow-lg">
-                  <img
-                    src="https://github.com/ankampriyanka.png"
+                  <Image
+                    src={profilePhoto}
                     alt="Ankam Priyanka"
+                    width={440}
+                    height={550}
                     className="aspect-[4/5] w-full rounded-[1.35rem] object-cover"
                   />
                 </div>
