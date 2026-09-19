@@ -5,14 +5,5 @@ import PageNavigation from "@/components/layout/PageNavigation";
 import ContactCTA from "@/components/sections/ContactCTA";
 
 export default function ContactPage() {
-  return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-white">
-        <ContactCTA />
-        <Container><PageNavigation current="/contact" /></Container>
-      </main>
-      <Footer />
-    </>
-  );
+  return (<><Navbar /><main className="min-h-screen bg-[#050505]"><ContactCTA /><Container><PageNavigation current="/contact" /></Container></main><Footer /></>);
 }
