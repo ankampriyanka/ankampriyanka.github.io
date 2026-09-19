@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Research } from "@/types/research";
 
 type ResearchCardProps = { research: Research };
@@ -24,15 +25,20 @@ const variants = {
     badge: "bg-white border-[#AEB3D0] text-[#4E537D]",
     motif: "GOVERNANCE · LIFECYCLE",
   },
+  4: {
+    surface: "bg-[#F7F8FB]",
+    border: "border-[#4E537D]",
+    accent: "bg-[#4E537D]",
+    badge: "bg-white border-[#C0CAD6] text-[#4E537D]",
+    motif: "TAXONOMY · KNOWLEDGE LAYER",
+  },
 } as const;
 
 export default function ResearchCard({ research }: ResearchCardProps) {
   const variant = variants[research.id as keyof typeof variants] ?? variants[1];
 
   return (
-    <article
-      className={`group relative flex h-full min-h-[330px] flex-col overflow-hidden rounded-2xl border ${variant.border} ${variant.surface} p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg`}
-    >
+    <article className={`group relative flex h-full min-h-[330px] flex-col overflow-hidden rounded-2xl border ${variant.border} ${variant.surface} p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg`}>
       <div className={`absolute left-0 top-0 h-1 w-full ${variant.accent}`} />
 
       <div className="flex items-center justify-between gap-3">
@@ -57,9 +63,9 @@ export default function ResearchCard({ research }: ResearchCardProps) {
         {research.summary}
       </p>
 
-      <div className="mt-6 text-sm font-semibold text-[#4E537D] transition group-hover:translate-x-1">
+      <Link href={`/research/${research.slug}`} className="mt-6 inline-flex items-center text-sm font-semibold text-[#4E537D] transition group-hover:translate-x-1">
         Explore research <span className="ml-2">→</span>
-      </div>
+      </Link>
     </article>
   );
 }
