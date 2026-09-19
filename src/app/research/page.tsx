@@ -13,10 +13,10 @@ export default function ResearchPage() {
       <Container>
         <SectionHeading
           title="Research"
-          subtitle="Research and exploration in Responsible AI, AI Safety, governance and trustworthy AI systems."
+          subtitle="A portfolio of frameworks, methodologies and applied research exploring how AI risks can be identified, measured, governed and evidenced."
         />
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
           {research.map((item) => (
             <ResearchCard
               key={item.id}
