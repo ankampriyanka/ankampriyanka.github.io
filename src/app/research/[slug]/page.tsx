@@ -34,6 +34,7 @@ const researchPages = {
       },
     ],
     metrics: ["Safety", "Fairness", "Robustness", "Explainability", "Privacy", "Governance"],
+    visual: "dms",
   },
   "ai-safety-risk-classification": {
     eyebrow: "AI Safety · Semantic Analysis",
@@ -64,6 +65,7 @@ const researchPages = {
       },
     ],
     metrics: ["Semantic fields", "Embeddings", "Risk classification", "Contextual similarity"],
+    visual: "semantic",
   },
   "responsible-ai-governance-automotive": {
     eyebrow: "AI Governance · Automotive",
@@ -94,6 +96,7 @@ const researchPages = {
       },
     ],
     metrics: ["Lifecycle controls", "Risk", "Assurance", "Evidence", "Monitoring", "Accountability"],
+    visual: "lifecycle",
   },
   "ai-trust-risk-taxonomy": {
     eyebrow: "AI Governance · Open Research Framework",
@@ -125,6 +128,7 @@ const researchPages = {
     ],
     metrics: ["9 trust dimensions", "7 lifecycle stages", "21 risks", "15 controls", "12 metrics", "9 evidence types"],
     github: "https://github.com/ankampriyanka/Responsible-AI-RAI-AI-Trust-Risk-Taxonomy",
+    visual: "taxonomy",
   },
 } as const;
 
@@ -156,6 +160,61 @@ export default async function ResearchDetailPage({ params }: { params: Promise<{
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">{research.intro}</p>
             </header>
+
+            <section className="mt-10 overflow-hidden rounded-3xl border border-[#C0CAD6] bg-[#EBEEF3] p-6 sm:p-8">
+              {research.visual === "dms" && (
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Trust assessment lens</p>
+                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                    {["Observe", "Evaluate", "Score"].map((step, i) => (
+                      <div key={step} className={`rounded-2xl p-5 ${i === 0 ? "bg-[#A7E4E9]" : i === 1 ? "bg-white border border-[#C0CAD6]" : "bg-[#4E537D] text-white"}`}>
+                        <span className="text-xs font-bold uppercase tracking-wider">{String(i + 1).padStart(2, "0")}</span>
+                        <p className="mt-2 text-lg font-bold">{step}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-4 rounded-2xl bg-white p-5 text-center font-semibold text-[#4E537D]">Evidence → Trust Dimensions → AI Trust Score</div>
+                </div>
+              )}
+              {research.visual === "semantic" && (
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Semantic risk field</p>
+                  <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                    {["Risk signal", "Context", "Embedding", "Similarity", "Classification"].map((item, i) => (
+                      <div key={item} className={`rounded-full border px-5 py-3 text-sm font-semibold ${i === 2 ? "border-[#4E537D] bg-[#4E537D] text-white" : "border-[#C0CAD6] bg-white text-[#4E537D]"}`}>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-6 text-center text-sm text-slate-600">Risk language → semantic representation → contextual classification</p>
+                </div>
+              )}
+              {research.visual === "lifecycle" && (
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Governance across the AI lifecycle</p>
+                  <div className="mt-6 grid gap-2 sm:grid-cols-4">
+                    {["Concept", "Data", "Development", "Validation", "Deployment", "Monitoring", "Evidence", "Decision"].map((item, i) => (
+                      <div key={item} className={`rounded-xl border p-4 text-center text-sm font-semibold ${i % 2 === 0 ? "border-[#AEB3D0] bg-white" : "border-[#A7E4E9] bg-[#F2FBFC]"} text-[#4E537D]`}>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {research.visual === "taxonomy" && (
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4E537D]">Relationship-first knowledge layer</p>
+                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                    {["Trust Dimension", "Lifecycle Stage", "Scenario", "Metric", "Control", "Evidence"].map((item, i) => (
+                      <div key={item} className="rounded-xl border border-[#C0CAD6] bg-white p-4 text-center text-sm font-semibold text-[#4E537D]">
+                        Risk → {item}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-4 rounded-xl bg-[#4E537D] p-4 text-center text-sm font-semibold text-white">External Framework Mapping</div>
+                </div>
+              )}
+            </section>
 
             <section className="mt-10 grid gap-4 sm:grid-cols-3" aria-label="Research dimensions">
               {research.metrics.map((metric, index) => (
