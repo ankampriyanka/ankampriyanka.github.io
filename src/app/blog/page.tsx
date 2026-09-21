@@ -15,6 +15,7 @@ const articles = [
     href: "/blog/understanding-ai-bom",
     date: "September 2026",
     readTime: "8 min read",
+    publishedAt: "2026-09-19",
     series: "AIBOM",
     part: "Part 1",
   },
@@ -26,6 +27,7 @@ const articles = [
     href: "/blog/ai-trust-risk-taxonomy",
     date: "September 2026",
     readTime: "10–12 min read",
+    publishedAt: "2026-09-21",
     series: "AI Trust & Risk Taxonomy",
   },
   {
@@ -36,6 +38,7 @@ const articles = [
     href: "/blog/nist-ai-rmf",
     date: "September 2026",
     readTime: "8 min read",
+    publishedAt: "2026-09-18",
     series: "NIST AI RMF",
   },
   {
@@ -46,6 +49,7 @@ const articles = [
     href: "/blog/ai-governance-debt",
     date: "September 2026",
     readTime: "7 min read",
+    publishedAt: "2026-09-14",
     series: "AI Governance Debt",
     part: "Part 1",
   },
@@ -57,6 +61,7 @@ const articles = [
     href: "/blog/ai-governance-debt-measuring",
     date: "September 2026",
     readTime: "8 min read",
+    publishedAt: "2026-09-15",
     series: "AI Governance Debt",
     part: "Part 2",
   },
@@ -68,21 +73,25 @@ const articles = [
     href: "/blog/ai-governance-debt-vs-technical-security",
     date: "September 2026",
     readTime: "8 min read",
+    publishedAt: "2026-09-16",
     series: "AI Governance Debt",
     part: "Part 3",
   },
 ];
 
-const featured = articles[0];
-const latest = articles.slice(1);
+const sortedArticles = [...articles].sort(
+  (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+);
+const featured = sortedArticles[0];
+const latest = sortedArticles.slice(1);
 
-function ArticleCard({
+function ArticleRow({
   article,
 }: {
   article: (typeof articles)[number];
 }) {
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-[#2A2A2A] bg-[#111111] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#F39A3F]/40 hover:shadow-xl">
+    <article className="group border-b border-[#2A2A2A] py-7 first:pt-0 last:border-b-0 last:pb-0">
       <div className="flex flex-wrap items-center gap-3">
         <span className="rounded-full border border-[#F39A3F]/40 bg-[#181818] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#F5F1EA]">
           {article.category}
@@ -92,17 +101,17 @@ function ArticleCard({
         )}
       </div>
 
-      <h3 className="mt-5 text-2xl font-bold leading-tight tracking-tight text-[#F5F1EA]">
+      <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-[#F5F1EA]">
         <Link href={article.href} className="transition group-hover:text-[#F5F1EA]">
           {article.title}
         </Link>
       </h3>
 
-      <p className="mt-4 flex-1 text-base leading-7 text-[#A9A39A]">
+      <p className="mt-3 max-w-3xl text-base leading-7 text-[#A9A39A]">
         {article.description}
       </p>
 
-      <div className="mt-7 flex items-center justify-between border-t border-[#2A2A2A] pt-5 text-sm">
+      <div className="mt-5 flex flex-wrap items-center justify-between gap-4 text-sm">
         <span className="text-[#77736D]">
           {article.date} · {article.readTime}
         </span>
@@ -181,7 +190,7 @@ export default function BlogPage() {
                   Explore article <span className="ml-2">→</span>
                 </Link>
                 <span className="text-sm text-[#77736D]">
-                  {featured.series} · {featured.part}
+                  {featured.series}{featured.part ? ` · ${featured.part}` : ""}
                 </span>
               </div>
               </div>
@@ -215,9 +224,9 @@ export default function BlogPage() {
             </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-[#2A2A2A] bg-[#111111] px-7 sm:px-9">
             {latest.map((article) => (
-              <ArticleCard key={article.href} article={article} />
+              <ArticleRow key={article.href} article={article} />
             ))}
           </div>
         </section>
