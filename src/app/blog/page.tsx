@@ -19,6 +19,16 @@ const articles = [
     part: "Part 1",
   },
   {
+    title: "From AI Risks to Evidence: Introducing the AI Trust & Risk Taxonomy",
+    description:
+      "How a relationship-first, machine-readable taxonomy connects AI risks, trust dimensions, lifecycle stages, scenarios, controls, metrics, evidence and external frameworks.",
+    category: "AI Governance · AITRT",
+    href: "/blog/ai-trust-risk-taxonomy",
+    date: "September 2026",
+    readTime: "10–12 min read",
+    series: "AI Trust & Risk Taxonomy",
+  },
+  {
     title: "NIST AI Risk Management Framework: GOVERN, MAP, MEASURE & MANAGE",
     description:
       "A practical perspective on turning the NIST AI RMF into a continuous AI risk management capability across governance, context, evidence and decisions.",
