@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Priyanka Ankam — AI Governance & Responsible AI Portfolio
 
-## Getting Started
+This repository contains my personal research and professional portfolio website.
 
-First, run the development server:
+**Focus:** AI Governance · Responsible AI · AI Assurance · AI Security · Trustworthy AI · Automotive AI
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What I work on
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+My work connects AI governance and assurance with practical engineering:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- AI governance frameworks and lifecycle controls
+- AI risk, trust and evidence models
+- AI security across data, models, supply chain, infrastructure, LLMs and agents
+- Trustworthy AI evaluation and measurable assurance
+- Automotive AI and Driver Monitoring Systems
+- Applied AI prototypes and intelligent engineering tools
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Research & Frameworks
 
-## Learn More
+| Area | Repository |
+|---|---|
+| AI Governance & Trust | [AI-Trust-Risk-Taxonomy](https://github.com/ankampriyanka/AI-Trust-Risk-Taxonomy) |
+| AI Security | [AI-Security-Levels](https://github.com/ankampriyanka/AI-Security-Levels) |
+| AI Risk Assessment | [AI-Risk-Assessor](https://github.com/ankampriyanka/AI-Risk-Assessor) |
+| Doctoral Research — DMS AI Trust Score | [DBA-ai-trust-score-dms](https://github.com/ankampriyanka/DBA-ai-trust-score-dms) |
+| Automotive AI — Driver Alertness | [DMS-SafetyEstimateLimittime](https://github.com/ankampriyanka/DMS-SafetyEstimateLimittime) |
 
-To learn more about Next.js, take a look at the following resources:
+## Applied AI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Model-Recommendation](https://github.com/ankampriyanka/Model-Recommendation)
+- [career-progression-app](https://github.com/ankampriyanka/career-progression-app)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Website
 
-## Deploy on Vercel
+The portfolio website is built with Next.js and contains my profile, projects, research, articles, resume and contact information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Live portfolio:** https://ankampriyanka.github.io
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Repository organization
+
+My GitHub work is intentionally separated into:
+
+**Personal portfolio & research** → this account  
+**Responsible AI community work** → Responsible-AI-RAI  
+**Academic coursework** → DBAAIML-Projects
+
+Historical prototypes and superseded implementations are retained separately and marked as legacy where appropriate.
+
+---
+
+**AI Governance → AI Security → AI Assurance → Trustworthy AI → Applied AI**
